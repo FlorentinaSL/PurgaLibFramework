@@ -1,29 +1,41 @@
-# 🔥 PurgaLib Framework
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
 
-![ALPHA](https://img.shields.io/badge/Status-ALPHA-orange?style=for-the-badge&logo=testinglibrary)
-![Platform](https://img.shields.io/badge/Platform-SCP:_Secret_Laboratory-black?style=for-the-badge)
-![C#](https://img.shields.io/badge/Language-C%23-239120?style=for-the-badge&logo=csharp&logoColor=white)
-![Build](https://img.shields.io/badge/Build-Passing-brightgreen?style=for-the-badge&logo=githubactions)
+<h1 align="center">🔥 PurgaLib Framework</h1>
 
----
+<div align="center">
+<img src="https://img.shields.io/badge/Status-ALPHA-orange?style=for-the-badge&logo=testinglibrary"/>
+<img src="https://img.shields.io/badge/Platform-SCP:_Secret_Laboratory-black?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/Language-C%23-239120?style=for-the-badge&logo=csharp&logoColor=white"/>
+<img src="https://img.shields.io/badge/Build-Passing-brightgreen?style=for-the-badge&logo=githubactions"/>
+</div>
 
-## 🌟 About
+<hr>
 
-PurgaLib is a lightweight, modular, developer-friendly framework for **SCP: Secret Laboratory**.  
-Designed to be fast, clean, and event-driven.
+<h2>🌟 About</h2>
+<p>PurgaLib is a lightweight, modular, developer-friendly framework for <strong>SCP: Secret Laboratory</strong>.<br>
+Designed to be fast, clean, and event-driven.</p>
 
----
+<hr>
 
-## 🛠️ Plugin Creation Tutorial
+<h2>🛠️ Plugin Creation Tutorial</h2>
 
-Follow these steps to create a plugin using **PurgaLib Framework v0.0.1**:
+<div class="step">
+<h3>1️⃣ Add PurgaLibFramework.dll</h3>
+<p>Include <code>PurgaLibFramework.dll</code> in your C# plugin project.<br>
+Place it in <strong>LabAPI/plugins/Global</strong>.</p>
+</div>
 
-> ### 1️⃣ Add PurgaLibFramework.dll
-Include `PurgaLibFramework.dll` in your C# plugin project.  
-Place it in **LabAPI/plugins/Global**.
-
-> ### 2️⃣ Create `Config.cs`
-```csharp
+<div class="step">
+<h3>2️⃣ Create Config.cs</h3>
+<pre><code class="language-csharp">
 using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Events.PluginManager;
 
 namespace ExamplePurgaLib
@@ -33,9 +45,12 @@ namespace ExamplePurgaLib
         public bool Enabled { get; set; } = true;
     }
 }
-```
-> ### 3️⃣ Create `Plugin.cs`
-```csharp
+</code></pre>
+</div>
+
+<div class="step">
+<h3>3️⃣ Create Plugin.cs</h3>
+<pre><code class="language-csharp">
 using System;
 using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLib_API.Server;
 using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Events.PluginManager;
@@ -61,8 +76,23 @@ namespace ExamplePurgaLib
         }
     }
 }
+</code></pre>
+</div>
 
-```
-<link rel="stylesheet" href="style.css">
+<div class="step">
+<h3>4️⃣ Add Your Logic</h3>
+<p>Implement events, commands, or any custom features for your plugin. Use PurgaLib's API for interacting with the server.</p>
+</div>
 
+<div class="step notes">
+<h3>💡 Notes</h3>
+<ul>
+<li>✔ All core events are implemented</li>
+<li>✔ For personal or server use only</li>
+<li>❌ Do not rebrand or redistribute</li>
+</ul>
+</div>
 
+</div> <!-- container -->
+</body>
+</html>
