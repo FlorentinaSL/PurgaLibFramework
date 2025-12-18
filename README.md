@@ -1,42 +1,83 @@
-<h1 align="center">🚀 PurgaLib Framework</h1>
+<h1 align="center">
+🔥 PurgaLib Framework
+</h1>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Status-ALPHA-orange?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Status-ALPHA-orange?style=for-the-badge&logo=testinglibrary"/>
+  <img src="https://img.shields.io/badge/Platform-SCP:_Secret_Laboratory-black?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/Language-C%23-239120?style=for-the-badge&logo=csharp&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Build-Passing-brightgreen?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Build-Passing-brightgreen?style=for-the-badge&logo=githubactions"/>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Framework-Custom-blueviolet?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/API-Stable_Core-success?style=for-the-badge"/>
 </p>
 
 ---
 
 <p align="center">
-<strong>PurgaLib</strong> is a modern framework for <strong>SCP: Secret Laboratory</strong>,<br>
-built to be <strong>efficient</strong>, <strong>clean</strong> and <strong>easy to use</strong>.
+<strong>PurgaLib</strong> is a next-generation framework for<br>
+<strong>SCP: Secret Laboratory</strong>
 </p>
 
 <p align="center">
-⚠️ This framework is currently in <strong>ALPHA</strong>.<br>
-Not all features available in <strong>EXILED</strong> are present yet,<br>
-but <strong>all core events are already implemented</strong>.
-</p>
-
----
-
-<h2 align="center">🧠 Technology</h2>
-
-<p align="center">
-PurgaLib is fully developed in:
-<br><br>
-<img src="https://img.shields.io/badge/C%23-.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white"/>
+Designed to be <strong>fast</strong>, <strong>modular</strong> and <strong>developer-friendly</strong>,<br>
+PurgaLib focuses on clean architecture and event-driven design.
 </p>
 
 ---
 
-<h2 align="center">📄 License & Usage</h2>
+<h2 align="center">⚠️ Development Status</h2>
 
 <p align="center">
-This project is protected by <strong>Copyright</strong>.<br><br>
-✔ You are allowed to copy the project and modify it for personal use.<br>
-❌ You are <strong>NOT</strong> allowed to rebrand, rename or redistribute it as your own framework.
+PurgaLib is currently in <strong>ALPHA</strong> stage.<br><br>
+While it does not yet include all advanced utilities available in <strong>EXILED</strong>,<br>
+<strong>all core and gameplay events are fully implemented</strong>.
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Events-100%25_Implemented-brightgreen?style=for-the-badge"/>
+</p>
+
+---
+
+<h2 align="center">🧠 Technology Stack</h2>
+
+<p align="center">
+Built entirely using modern .NET technologies:
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/C%23-.NET_7+-512BD4?style=for-the-badge&logo=dotnet&logoColor=white"/>
+</p>
+
+---
+
+<h2 align="center">📦 Philosophy</h2>
+
+<p align="center">
+✔ Clean & maintainable code<br>
+✔ Minimal overhead<br>
+✔ Event-first architecture<br>
+✔ Plugin-developer oriented
+</p>
+
+---
+
+<h2 align="center">📜 License & Usage</h2>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/License-Custom-red?style=for-the-badge"/>
+</p>
+
+<p align="center">
+This project is protected by <strong>Copyright</strong>.
+</p>
+
+<p align="center">
+✔ You may clone and modify the framework for personal or private projects.<br>
+❌ You may <strong>NOT</strong> rebrand, rename, or redistribute PurgaLib as your own framework.
 </p>
 
 ---
@@ -44,11 +85,20 @@ This project is protected by <strong>Copyright</strong>.<br><br>
 <h2 align="center">🌍 Documentation</h2>
 
 <p align="center">
-Centralized README versions available:
+  <img src="https://img.shields.io/badge/README-English-blue?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/README-Italian-green?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/More_Languages-Coming_Soon-lightgrey?style=for-the-badge"/>
+</p>
+
+---
+
+<h2 align="center">✨ Vision</h2>
+
+<p align="center">
+PurgaLib aims to become a solid, reliable alternative framework<br>
+for advanced SCP: SL plugin development.
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/README-English-blue?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/README-Italian-green?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/More-Coming_Soon-lightgrey?style=for-the-badge"/>
+<strong>Built by developers, for developers.</strong>
 </p>
