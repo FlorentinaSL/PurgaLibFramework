@@ -1,0 +1,48 @@
+name: Deploy HTML to GitHub Pages
+
+on:
+  push:
+    branches: ["master"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      # 1️⃣ Checkout della repo
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 2️⃣ Disabilita Jekyll (evita che README.md diventi home)
+      - name: Create .nojekyll
+        run: touch .nojekyll
+
+      # 3️⃣ Configura Pages
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      # 4️⃣ Carica solo i file statici necessari
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: |
+            ./index.html
+            ./style.css       # opzionale, se hai CSS
+            ./assets/         # opzionale, se hai immagini o JS
+
+      # 5️⃣ Deploy su GitHub Pages
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
