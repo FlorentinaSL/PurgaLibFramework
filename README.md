@@ -49,7 +49,7 @@ Built entirely using modern .NET technologies:
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/C%23-.NET_7+-512BD4?style=for-the-badge&logo=dotnet&logoColor=white"/>
+  <img src="https://img.shields.io/badge/C%23-.NET_4.8-512BD4?style=for-the-badge&logo=dotnet&logoColor=white"/>
 </p>
 
 ---
