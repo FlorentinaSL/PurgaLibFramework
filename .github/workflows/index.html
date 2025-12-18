@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PurgaLib Framework - Plugin Creation</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #1f1f1f;
+            border-bottom: 3px solid #ff6f00;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.8em;
+            color: #ff6f00;
+        }
+        .badges img {
+            margin: 5px;
+        }
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        section {
+            margin-bottom: 50px;
+            background-color: #1f1f1f;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255,111,0,0.3);
+        }
+        section h2 {
+            color: #ff6f00;
+            border-bottom: 2px solid #ff6f00;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        pre {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: Consolas, monospace;
+        }
+        .note {
+            background-color: #262626;
+            border-left: 5px solid #ff6f00;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        a {
+            color: #ff6f00;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🚀 PurgaLib Framework</h1>
+        <div class="badges">
+            <img src="https://img.shields.io/badge/v0.1.0--ALPHA-orange?style=for-the-badge" alt="Version">
+            <img src="https://img.shields.io/badge/C%23-.NET-239120?style=for-the-badge&logo=csharp&logoColor=white" alt="C#">
+            <img src="https://img.shields.io/badge/Build-Passing-brightgreen?style=for-the-badge" alt="Build">
+        </div>
+        <p>Quick guide to create a plugin with PurgaLib Framework</p>
+    </header>
+    <main>
+        <section>
+            <h2>⚙️ Installation</h2>
+            <h3>Manual</h3>
+            <p>Place the <strong>PurgaLib.dll</strong> into your C# plugin project:</p>
+            <pre>LabAPI/plugins/Global</pre>
+            <p>The framework will load automatically on server startup.</p>
+
+            <h3>Installer (Linux & Windows)</h3>
+            <p>Run the installer and provide the <strong>SCP:SL installation path</strong>.</p>
+            <pre>
+Linux:
+chmod +x installer.sh
+./installer.sh
+
+Windows:
+Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+.\installer.ps1
+            </pre>
+        </section>
+        <section>
+            <h2>📖 Tutorial: Plugin Creation</h2>
+            <div class="note">
+                1️⃣ Add <code>PurgaLibFramework.dll</code> to your project.<br>
+                2️⃣ Create a <code>Config.cs</code> file implementing <code>IPurgaConfig</code>.<br>
+                3️⃣ Create a <code>Plugin.cs</code> file implementing <code>Plugin&lt;Config&gt;</code>.<br>
+                <br>
+                💡 You can add further explanations, code examples, screenshots, or notes here.
+            </div>
+        </section>
+        <section>
+            <h2>📜 Usage</h2>
+            <ul>
+                <li>✔ Allowed on servers</li>
+                <li>❌ Do not rebrand or redistribute the framework</li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
