@@ -1,104 +1,72 @@
-<h1 align="center">
-🔥 PurgaLib Framework
-</h1>
+<h2 align="center">🛠️ Plugin Creation Tutorial</h2>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Status-ALPHA-orange?style=for-the-badge&logo=testinglibrary"/>
-  <img src="https://img.shields.io/badge/Platform-SCP:_Secret_Laboratory-black?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Language-C%23-239120?style=for-the-badge&logo=csharp&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Build-Passing-brightgreen?style=for-the-badge&logo=githubactions"/>
+Follow these steps to create a plugin using <strong>PurgaLib Framework</strong> v0.0.1.
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Framework-Custom-blueviolet?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/API-Stable_Core-success?style=for-the-badge"/>
-</p>
+<div style="background-color:#1f1f1f; border-left:5px solid #ff6f00; border-radius:8px; padding:20px; margin:20px 0;">
+  <h3>1️⃣ Add PurgaLibFramework.dll <span style="background:#ff6f00; color:#fff; padding:2px 8px; border-radius:4px; font-size:0.9em;">Step</span></h3>
+  <p>Include <code>PurgaLib.dll</code> in your C# plugin project.<br>
+  Place it in <strong>LabAPI/plugins/Global</strong>.</p>
+</div>
 
----
+<div style="background-color:#1f1f1f; border-left:5px solid #00bcd4; border-radius:8px; padding:20px; margin:20px 0;">
+  <h3>2️⃣ Create <code>Config.cs</code> <span style="background:#00bcd4; color:#fff; padding:2px 8px; border-radius:4px; font-size:0.9em;">Step</span></h3>
+  <pre style="background-color:#262626; color:#fff; padding:15px; border-radius:5px; overflow-x:auto;">
+using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Events.PluginManager;
 
-<p align="center">
-<strong>PurgaLib</strong> is a next-generation framework for<br>
-<strong>SCP: Secret Laboratory</strong>
-</p>
+namespace ExamplePurgaLib
+{
+    public class Config : IPurgaConfig
+    {
+        public bool Enabled { get; set; } = true;
+    }
+}
+  </pre>
+</div>
 
-<p align="center">
-Designed to be <strong>fast</strong>, <strong>modular</strong> and <strong>developer-friendly</strong>,<br>
-PurgaLib focuses on clean architecture and event-driven design.
-</p>
+<div style="background-color:#1f1f1f; border-left:5px solid #4caf50; border-radius:8px; padding:20px; margin:20px 0;">
+  <h3>3️⃣ Create <code>Plugin.cs</code> <span style="background:#4caf50; color:#fff; padding:2px 8px; border-radius:4px; font-size:0.9em;">Step</span></h3>
+  <pre style="background-color:#262626; color:#fff; padding:15px; border-radius:5px; overflow-x:auto;">
+using System;
+using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLib_API.Server;
+using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Events.PluginManager;
 
----
+namespace ExamplePurgaLib
+{
+    public class Main : Plugin&lt;Config&gt;
+    {
+        public override string Name { get; } = "Example Plugin";
+        public override string Author { get; } = "Florentina&lt;3";
+        public override string Description { get; } = "Test";
+        public override Version Version { get; } = new Version(0,0,1);
+        public override Version RequiredPurgaLibVersion { get; } = new Version(0,0,1);
+        
+        protected override void OnEnabled()
+        {
+            Log.Info("Hi from Plugin PurgaLib");
+        }
 
-<h2 align="center">⚠️ Development Status</h2>
+        protected override void OnDisabled()
+        {
+            Log.Info("Bye from Plugin PurgaLib");
+        }
+    }
+}
+  </pre>
+</div>
 
-<p align="center">
-PurgaLib is currently in <strong>ALPHA</strong> stage.<br><br>
-While it does not yet include all advanced utilities available in <strong>EXILED</strong>,<br>
-<strong>all core and gameplay events are fully implemented</strong>.
-</p>
+<div style="background-color:#1f1f1f; border-left:5px solid #ff5722; border-radius:8px; padding:20px; margin:20px 0;">
+  <h3>4️⃣ Add Your Logic <span style="background:#ff5722; color:#fff; padding:2px 8px; border-radius:4px; font-size:0.9em;">Step</span></h3>
+  <p>Implement events, commands, or any custom features for your plugin.<br>
+  Use PurgaLib's API for interacting with the server.</p>
+</div>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Events-100%25_Implemented-brightgreen?style=for-the-badge"/>
-</p>
-
----
-
-<h2 align="center">🧠 Technology Stack</h2>
-
-<p align="center">
-Built entirely using modern .NET technologies:
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/C%23-.NET_7+-512BD4?style=for-the-badge&logo=dotnet&logoColor=white"/>
-</p>
-
----
-
-<h2 align="center">📦 Philosophy</h2>
-
-<p align="center">
-✔ Clean & maintainable code<br>
-✔ Minimal overhead<br>
-✔ Event-first architecture<br>
-✔ Plugin-developer oriented
-</p>
-
----
-
-<h2 align="center">📜 License & Usage</h2>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/License-Custom-red?style=for-the-badge"/>
-</p>
-
-<p align="center">
-This project is protected by <strong>Copyright</strong>.
-</p>
-
-<p align="center">
-✔ You may clone and modify the framework for personal or private projects.<br>
-❌ You may <strong>NOT</strong> rebrand, rename, or redistribute PurgaLib as your own framework.
-</p>
-
----
-
-<h2 align="center">🌍 Documentation</h2>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/README-English-blue?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/README-Italian-green?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/More_Languages-Coming_Soon-lightgrey?style=for-the-badge"/>
-</p>
-
----
-
-<h2 align="center">✨ Vision</h2>
-
-<p align="center">
-PurgaLib aims to become a solid, reliable alternative framework<br>
-for advanced SCP: SL plugin development.
-</p>
-
-<p align="center">
-<strong>Built by Florentina<3, for developers.</strong>
-</p>
+<div style="background-color:#1f1f1f; border-left:5px solid #9c27b0; border-radius:8px; padding:20px; margin:20px 0;">
+  <h3>💡 Notes <span style="background:#9c27b0; color:#fff; padding:2px 8px; border-radius:4px; font-size:0.9em;">Important</span></h3>
+  <ul>
+    <li>✔ All core events are implemented</li>
+    <li>✔ For personal or server use only</li>
+    <li>❌ Do not rebrand or redistribute</li>
+  </ul>
+</div>
