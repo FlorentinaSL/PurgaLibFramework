@@ -17,6 +17,10 @@
 
         <projectUrl>https://github.com/FlorentinaSL/PurgaLibFramework</projectUrl>
         <repository type="Git" url="https://github.com/FlorentinaSL/PurgaLibFramework" />
+        
+        <license type="file">Copyright.txt</license>
+        
+        <readme>README.md</readme>
 
         <tags>SCP SL Framework Plugin API</tags>
 
@@ -26,6 +30,9 @@
     </metadata>
 
     <files>
-        <file src="bin\Debug\PurgaLibFramework.dll" target="lib\net48" />
+        <file src="..\..\bin\Debug\PurgaLibFramework.dll" target="lib\net48" />
+        
+        <file src="C:\Users\ciste\RiderProjects\PurgaLibFramework\PurgaLibFramework\PurgaLibFramework\Copyright.txt" target="" />
+        <file src="README.md" target="" />
     </files>
 </package>
