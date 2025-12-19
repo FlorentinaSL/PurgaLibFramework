@@ -19,9 +19,6 @@ namespace PurgaLibFramework.PurgaLibFramework
         {
             Instance = this;
             
-            _purgaLoader = new PurgaLoader();
-            _purgaLoader.LoadPlugins();
-            
             Logger.Raw($"PurgaLibAPI Version: {Version}", ConsoleColor.Red);
             Logger.Raw(@" 
 Welcome to:
@@ -33,6 +30,10 @@ Welcome to:
 ██║     ╚██████╔╝██║  ██║╚██████╔╝██║  ██║███████╗██║██████╔╝
 ╚═╝      ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝╚═════╝ [*] by Florentina
 ", ConsoleColor.DarkMagenta);
+            
+            _purgaLoader = new PurgaLoader();
+            _purgaLoader.LoadPlugins();
+            
         }
 
         public override void Disable()

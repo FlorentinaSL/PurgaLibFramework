@@ -416,6 +416,7 @@
     <ItemGroup>
       <Content Include="bin\Debug\PurgaLibFramework.dll" />
       <Content Include="PurgaLibFramework\Copyright.txt" />
+      <Content Include="PurgaLibFramework\NuGet\pack.nuspec" />
       <Content Include="PurgaLibFramework\PurgaLib\PurgaLibInstaller\Linux\Installer.sh" />
       <Content Include="PurgaLibFramework\PurgaLib\PurgaLibInstaller\Windows\Installer.ps1" />
     </ItemGroup>

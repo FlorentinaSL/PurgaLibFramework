@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>PurgaLibFramework</id>
+        <title>PurgaLib Framework</title>
+        <version>$version$</version>
+
+        <authors>Florentina&lt;3</authors>
+        <owners>FlorentinaSL</owners>
+
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+
+        <description>
+            Lightweight plugin framework for SCP: Secret Laboratory.
+            Event-driven, modular and developer-friendly.
+        </description>
+
+        <projectUrl>https://github.com/FlorentinaSL/PurgaLibFramework</projectUrl>
+        <repository type="Git" url="https://github.com/FlorentinaSL/PurgaLibFramework" />
+
+        <tags>SCP SL Framework Plugin API</tags>
+
+        <dependencies>
+            <group targetFramework="net48" />
+        </dependencies>
+    </metadata>
+
+    <files>
+        <file src="bin\Debug\PurgaLibFramework.dll" target="lib\net48" />
+    </files>
+</package>
