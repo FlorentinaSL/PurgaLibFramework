@@ -3,8 +3,10 @@
 Follow these steps to create a plugin using **PurgaLib Framework v0.0.1**:
 
 ### 1️⃣ Add PurgaLibFramework.dll
-Include `PurgaLibFramework.dll` in your C# plugin project.  
+Include `PurgaLibFramework.dll` in your C# plugin project.
 Place it in **LabAPI/plugins/Global**.
+OR:
+you can simply search the pack in nuget, the name is PurgaLibFramework.
 
 ### 2️⃣ Create `Config.cs`
 ```csharp
