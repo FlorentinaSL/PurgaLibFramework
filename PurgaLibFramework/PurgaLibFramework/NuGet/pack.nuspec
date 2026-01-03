@@ -31,8 +31,8 @@
 
     <files>
         <file src="..\..\bin\Debug\PurgaLibFramework.dll" target="lib\net48" />
-        
-        <file src="C:\Users\ciste\RiderProjects\PurgaLibFramework\PurgaLibFramework\PurgaLibFramework\Copyright.txt" target="" />
+        <file src="..\..\bin\Debug\LabApi.dll" target="lib\net48" />
+        <file src="Copyright.txt" target="" />
         <file src="ico.png" target="" />
         <file src="README.md" target="" />
     </files>

@@ -124,3 +124,15 @@ C:\Users\ciste\RiderProjects\PurgaLibFramework\PurgaLibFramework\bin\Debug\YamlD
 C:\Users\ciste\RiderProjects\PurgaLibFramework\PurgaLibFramework\obj\Debug\PurgaLib.DE3B3790.Up2Date
 C:\Users\ciste\RiderProjects\PurgaLibFramework\PurgaLibFramework\obj\Debug\PurgaLibFramework.dll
 C:\Users\ciste\RiderProjects\PurgaLibFramework\PurgaLibFramework\obj\Debug\PurgaLibFramework.pdb
+C:\Users\Papa\RiderProjects\PurgaLibFramework\PurgaLibFramework\bin\Debug\PurgaLibFramework.dll.config
+C:\Users\Papa\RiderProjects\PurgaLibFramework\PurgaLibFramework\bin\Debug\PurgaLibFramework.dll
+C:\Users\Papa\RiderProjects\PurgaLibFramework\PurgaLibFramework\bin\Debug\PurgaLibFramework.pdb
+C:\Users\Papa\RiderProjects\PurgaLibFramework\PurgaLibFramework\bin\Debug\LabApi.dll
+C:\Users\Papa\RiderProjects\PurgaLibFramework\PurgaLibFramework\bin\Debug\YamlDotNet.dll
+C:\Users\Papa\RiderProjects\PurgaLibFramework\PurgaLibFramework\bin\Debug\LabApi.xml
+C:\Users\Papa\RiderProjects\PurgaLibFramework\PurgaLibFramework\bin\Debug\YamlDotNet.xml
+C:\Users\Papa\RiderProjects\PurgaLibFramework\PurgaLibFramework\obj\Debug\PurgaLibFramework.csproj.AssemblyReference.cache
+C:\Users\Papa\RiderProjects\PurgaLibFramework\PurgaLibFramework\obj\Debug\PurgaLibFramework.csproj.CoreCompileInputs.cache
+C:\Users\Papa\RiderProjects\PurgaLibFramework\PurgaLibFramework\obj\Debug\PurgaLib.DE3B3790.Up2Date
+C:\Users\Papa\RiderProjects\PurgaLibFramework\PurgaLibFramework\obj\Debug\PurgaLibFramework.dll
+C:\Users\Papa\RiderProjects\PurgaLibFramework\PurgaLibFramework\obj\Debug\PurgaLibFramework.pdb

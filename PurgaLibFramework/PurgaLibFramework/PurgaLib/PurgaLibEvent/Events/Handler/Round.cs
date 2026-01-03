@@ -9,7 +9,9 @@ namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Events.Hand
         public static event EventHandler<RoundEndedEventArgs> Ended;
         public static event EventHandler<RoundRestartingEventArgs> Restarting;
         public static event EventHandler<WaitingForPlayersEventArgs> WaitingForPlayers;
-
+        
+        public static event EventHandler<RoundStartingEventArgs> Starting;
+        
         internal static void OnStarted(RoundStartedEventArgs ev)
             => EventManager.Invoke(Started, null, ev);
 
@@ -18,8 +20,11 @@ namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Events.Hand
 
         internal static void OnRestarting(RoundRestartingEventArgs ev)
             => EventManager.Invoke(Restarting, null, ev);
-        
+
         internal static void OnWaitingForPlayers(WaitingForPlayersEventArgs ev)
             => EventManager.Invoke(WaitingForPlayers, null, ev);
+        
+        internal static void OnStarting(RoundStartingEventArgs ev)
+            => EventManager.Invoke(Starting, null, ev);
     }
 }

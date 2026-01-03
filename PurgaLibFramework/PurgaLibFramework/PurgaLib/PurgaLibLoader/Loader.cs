@@ -3,7 +3,7 @@ using LabApi.Features.Console;
 using LabApi.Loader.Features.Plugins;
 using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibLoader.PurgaLib_Loader.LoaderEvent;
 
-namespace PurgaLibFramework.PurgaLibFramework
+namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibLoader
 {
     public class Loader : Plugin<Config>
     {
@@ -12,7 +12,7 @@ namespace PurgaLibFramework.PurgaLibFramework
         public override string Name { get; } = "PurgaLibLoader";
         public override string Description { get; } = "The loader of PurgaLibAPI";
         public override string Author { get; } = "PurgaLibTeam";
-        public override Version Version { get; } = new Version(0, 0, 1);
+        public override Version Version { get; } = new Version(0, 0, 4);
         public override Version RequiredApiVersion { get; } = new Version(1,0,0,0);
         
         public override void Enable()

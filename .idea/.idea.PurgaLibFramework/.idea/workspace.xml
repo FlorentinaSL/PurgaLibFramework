@@ -5,34 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c01975cb-3816-4a23-ba40-e78c7ddb9fb2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/EventArgs/Map/OnDoorInteracting.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/EventArgs/Map/OnElevatorUsing.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/EventArgs/Player/PlayerChangingRoleEventArgs.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/EventArgs/Player/PlayerDiedEventArgs.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/EventArgs/Player/PlayerDyingEventArgs.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/EventArgs/Player/PlayerHurtingEventArgs.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/EventArgs/Player/PlayerJoinedEventArgs.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/EventArgs/Player/PlayerLeftEventArgs.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/EventArgs/Player/PlayerSpawningEventArgs.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/EventArgs/Round/OnRoundEnded.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/EventArgs/Round/OnRoundStarted.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/EventArgs/Round/OnWaitingForPlayers.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/EventArgs/Round/RoundRestartingEventArgs.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/EventArgs/SCP/ScpAttackingEventArgs.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/EventArgs/SCP/ScpUsingAbilityEventArgs.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/EventManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/Handler/Player.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/Handler/Round.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/Handler/Scp.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/Hooks/LabAPIHooks.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/NuGet/Copyright.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/NuGet/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/Handler/Door.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/Handler/Elevator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PurgaLibFramework/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PurgaLibFramework/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PurgaLibFramework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PurgaLibFramework/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Debug/PurgaLibFramework.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/bin/Debug/PurgaLibFramework.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/Config.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibLoader/Config.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/Loader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibLoader/Loader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/NuGet/pack.nuspec" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/NuGet/pack.nuspec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/EventArgs/Map/OnDoorInteracting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/EventArgs/Map/OnDoorInteracting.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/EventArgs/Map/OnElevatorUsing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/EventArgs/Map/OnElevatorUsing.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/EventArgs/Player/PlayerDiedEventArgs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/EventArgs/Player/PlayerDiedEventArgs.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/EventArgs/Round/OnRoundStarted.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/EventArgs/Round/OnRoundStarted.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/EventArgs/SCP/ScpAttackingEventArgs.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/EventArgs/SCP/ScpUsingAbilityEventArgs.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/Handler/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/Handler/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/Handler/Round.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/Handler/Round.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/Handler/Scp.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/Hooks/LabAPIHooks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/Hooks/LabAPIHooks.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibLoader/PurgaLib_Loader/LoaderEvent/PurgaLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibLoader/PurgaLib_Loader/LoaderEvent/PurgaLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLib_API/Player/Actions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLib_API/Player/Actions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLib_API/Player/List.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLib_API/Player/List.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLib_API/Player/State.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLib_API/Player/State.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLib_API/Server/Round.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLib_API/Server/Round.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Debug/PurgaLibFramework.dll" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Debug/PurgaLibFramework.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/bin/Debug/PurgaLibFramework.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PurgaLibFramework/obj/Debug/PurgaLibFramework.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/obj/Debug/PurgaLibFramework.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PurgaLibFramework/obj/Debug/PurgaLibFramework.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/obj/Debug/PurgaLibFramework.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/obj/Debug/PurgaLibFramework.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/obj/Debug/PurgaLibFramework.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PurgaLibFramework/obj/Debug/PurgaLibFramework.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/obj/Debug/PurgaLibFramework.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PurgaLibFramework/obj/Debug/PurgaLibFramework.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/obj/Debug/PurgaLibFramework.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,39 +55,44 @@
     &quot;assignee&quot;: &quot;FlorentinaSL&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/FlorentinaSL/PurgaLibFramework.git&quot;,
-    &quot;accountId&quot;: &quot;8a5f3456-7b1e-4baf-8f44-378abc9269af&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/FlorentinaSL/PurgaLibFramework.git",
+    "accountId": "f43f6b3e-62f7-4916-a8af-a3b647e773a8"
   }
-}</component>
+}]]></component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/Handler/Door.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/Handler/Elevator.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="36zNehensIGbnp3t0Zhxfdhte0w" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.updates&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" useMixedMode="false">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
@@ -111,6 +123,7 @@
       <workItem from="1766147935367" duration="3703000" />
       <workItem from="1766164472032" duration="1131000" />
       <workItem from="1766165693164" duration="4157000" />
+      <workItem from="1767440048998" duration="5206000" />
     </task>
     <task id="LOCAL-00001" summary="Added nuspec for the project.">
       <option name="closed" value="true" />
@@ -153,6 +166,24 @@
     <MESSAGE value="Added nuspec and will be validated." />
     <MESSAGE value="Updated The icon of the nuget package" />
     <option name="LAST_COMMIT_MESSAGE" value="Updated The icon of the nuget package" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.OperationCanceledException" breakIfHandledByOtherCode="false" displayValue="System.OperationCanceledException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.Threading.Tasks.TaskCanceledException" breakIfHandledByOtherCode="false" displayValue="System.Threading.Tasks.TaskCanceledException" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

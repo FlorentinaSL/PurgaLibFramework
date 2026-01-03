@@ -399,8 +399,6 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Properties\AssemblyInfo.cs"/>
-        <Compile Include="PurgaLibFramework\Config.cs" />
-        <Compile Include="PurgaLibFramework\Loader.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibEvent\Events\EventArgs\Map\OnDoorInteracting.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibEvent\Events\EventArgs\Map\OnElevatorUsing.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibEvent\Events\EventArgs\Player\PlayerDiedEventArgs.cs" />
@@ -414,14 +412,15 @@
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibEvent\Events\EventArgs\Player\PlayerLeftEventArgs.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibEvent\Events\EventArgs\Player\PlayerSpawningEventArgs.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibEvent\Events\EventArgs\Round\RoundRestartingEventArgs.cs" />
-        <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibEvent\Events\EventArgs\SCP\ScpAttackingEventArgs.cs" />
-        <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibEvent\Events\EventArgs\SCP\ScpUsingAbilityEventArgs.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibEvent\Events\EventManager.cs" />
+        <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibEvent\Events\Handler\Door.cs" />
+        <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibEvent\Events\Handler\Elevator.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibEvent\Events\Handler\Player.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibEvent\Events\Handler\Round.cs" />
-        <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibEvent\Events\Handler\Scp.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibEvent\Events\Hooks\LabAPIHooks.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibEvent\Events\PluginManager\Plugin.cs" />
+        <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibLoader\Config.cs" />
+        <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibLoader\Loader.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibLoader\PurgaLib_Loader\Command\PluginList.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibLoader\PurgaLib_Loader\LoaderEvent\ConfigManager.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibLoader\PurgaLib_Loader\LoaderEvent\PurgaLoader.cs" />
@@ -434,19 +433,17 @@
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLib_API\Server\Server.cs" />
     </ItemGroup>
     <ItemGroup>
+      <Content Include="bin\Debug\LabApi.dll" />
       <Content Include="bin\Debug\PurgaLibFramework.dll" />
       <Content Include="PurgaLibFramework\Copyright.txt" />
+      <Content Include="PurgaLibFramework\NuGet\Copyright.txt" />
       <Content Include="PurgaLibFramework\NuGet\ico.png" />
       <Content Include="PurgaLibFramework\NuGet\nuget.exe" />
       <Content Include="PurgaLibFramework\NuGet\pack.nuspec" />
-      <Content Include="PurgaLibFramework\NuGet\PurgaLibFramework.0.0.1.nupkg" />
-      <Content Include="PurgaLibFramework\NuGet\PurgaLibFramework.0.0.2.nupkg" />
+      <Content Include="PurgaLibFramework\NuGet\PurgaLibFramework.0.0.4.nupkg" />
       <Content Include="PurgaLibFramework\NuGet\README.md" />
       <Content Include="PurgaLibFramework\PurgaLib\PurgaLibInstaller\Linux\Installer.sh" />
       <Content Include="PurgaLibFramework\PurgaLib\PurgaLibInstaller\Windows\Installer.ps1" />
-    </ItemGroup>
-    <ItemGroup>
-      <Folder Include="PurgaLibFramework\PurgaLib\PurgaLib_API\Map\" />
     </ItemGroup>
     <ItemGroup>
       <None Include="App.config" />

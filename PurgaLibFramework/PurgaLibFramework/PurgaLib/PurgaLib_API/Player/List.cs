@@ -1,10 +1,18 @@
-﻿namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLib_API.Player
+﻿using System.Collections.Generic;
+using System.Text.RegularExpressions;
+
+namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLib_API.Player
 {
     public static class List
     {
-        public static void Show()
+        public static IEnumerable<LabApi.Features.Wrappers.Player> GetAll()
         {
-             LabApi.Features.Wrappers.Player.List.Count.ToString();
+            return LabApi.Features.Wrappers.Player.List;
+        }
+        
+        public static int Count()
+        {
+            return LabApi.Features.Wrappers.Player.List.Count;
         }
     }
 }

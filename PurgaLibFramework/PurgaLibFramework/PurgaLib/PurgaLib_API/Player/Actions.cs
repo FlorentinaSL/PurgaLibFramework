@@ -18,7 +18,13 @@ namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLib_API.Player
         {
             player.Position.Set(x, y, z);
         }
-
+        
+        public static void TeleportRelative(LabApi.Features.Wrappers.Player player, float dx, float dy, float dz)
+        {
+            var pos = player.Position;
+            player.Position.Set(pos.x + dx, pos.y + dy, pos.z + dz);
+        }
+       
         public static void Give(LabApi.Features.Wrappers.Player player, ItemType item)
         {
             player.AddItem(item);

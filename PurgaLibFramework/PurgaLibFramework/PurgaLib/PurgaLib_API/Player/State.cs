@@ -1,30 +1,33 @@
-﻿namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLib_API.Player
+﻿using PlayerRoles;
+
+namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLib_API.Player
 {
     public static class State
     {
-        public static void Name(LabApi.Features.Wrappers.Player player)
+        public static string Name(LabApi.Features.Wrappers.Player player)
         {
-            player.Nickname.ToString();
+            return player.Nickname;
         }
 
-        public static void Id(LabApi.Features.Wrappers.Player player)
+        public static int Id(LabApi.Features.Wrappers.Player player)
         {
-            player.PlayerId.ToString();
+            return player.PlayerId;
         }
 
-        public static void Role(LabApi.Features.Wrappers.Player player)
+        public static RoleTypeId Role(LabApi.Features.Wrappers.Player player)
         {
-            player.Role.ToString();
+            return player.Role;
         }
 
-        public static void Health(LabApi.Features.Wrappers.Player player)
+        public static float Health(LabApi.Features.Wrappers.Player player)
         {
-            player.Health.ToString();
+            return player.Health;
         }
 
-        public static void Position(LabApi.Features.Wrappers.Player player)
+        public static (float x, float y, float z) Position(LabApi.Features.Wrappers.Player player)
         {
-            player.Position.ToString();
+            var pos = player.Position;
+            return (pos.x, pos.y, pos.z);
         }
     }
 }
