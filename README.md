@@ -35,7 +35,7 @@ namespace ExamplePurgaLib
         public override string Author { get; } = "Florentina<3";
         public override string Description { get; } = "Test plugin for PurgaLib";
         public override Version Version { get; } = new Version(0,0,1);
-        public override Version RequiredPurgaLibVersion { get; } = new Version(0,0,1);
+        public override Version RequiredPurgaLibVersion { get; } = new Version(0,0,5);
         
         protected override void OnEnabled()
         {
