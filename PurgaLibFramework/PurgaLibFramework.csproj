@@ -454,6 +454,7 @@
       <Content Include="bin\Debug\PurgaLibFramework.dll" />
       <Content Include="PurgaLibFramework\Copyright.txt" />
       <Content Include="PurgaLibFramework\NuGet\Copyright.txt" />
+      <Content Include="PurgaLibFramework\NuGet\ico.png" />
       <Content Include="PurgaLibFramework\NuGet\nuget.exe" />
       <Content Include="PurgaLibFramework\NuGet\pack.nuspec" />
       <Content Include="PurgaLibFramework\NuGet\README.md" />
