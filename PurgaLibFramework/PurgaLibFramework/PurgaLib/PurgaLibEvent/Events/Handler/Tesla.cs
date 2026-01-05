@@ -35,7 +35,7 @@ namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Events.Hand
             {
                 var args = new OnInteractingTeslaEventArgs(ev.Player)
                 {
-                    IsEnabled = true 
+                    IsEnabled = true
                 };
                 OnInteracting(args);
             };

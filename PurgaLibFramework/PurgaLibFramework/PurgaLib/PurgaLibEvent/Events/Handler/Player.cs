@@ -34,7 +34,13 @@ namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Events.Hand
         private static EventHandler<PlayerInteractingDoorEventArgs> _interactingDoor;
         private static EventHandler<PlayerInteractingElevatorEventArgs> _interactingElevator;
         private static EventHandler<PlayerVerifiedEventArgs> _verified;
+        private static EventHandler<UpgradingPlayersEventArgs> _upgrading;
         
+        public static event EventHandler<UpgradingPlayersEventArgs> Upgrading
+        {
+            add { Add(ref _upgrading, value, RegisterLabApi); }
+            remove { _upgrading -= value; }
+        }
         public static event EventHandler<PlayerBannedEventArgs> Banned
         {
             add { Add(ref _banned, value, RegisterLabApi);}
@@ -145,7 +151,20 @@ namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Events.Hand
         public static void RegisterLabApi()
         {
             PlayerEvents.Joined += ev =>
+            {
+                var player = ev.Player;
                 On(_joined, new PlayerJoinedEventArgs(ev.Player));
+
+                string userId = player.UserId;
+                if (string.IsNullOrEmpty(userId))
+                    return;
+
+                if (VerifiedPlayersCache.Verified.Add(userId))
+                    On(_verified, new PlayerVerifiedEventArgs(player));
+
+                if (CreditTagsHandler.IsContributor(player))
+                    CreditTagsHandler.ApplyContributorTag(player);
+            };
 
             PlayerEvents.Left += ev =>
             {
@@ -162,26 +181,15 @@ namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Events.Hand
             {
                 var player = ev.Player;
                 On(_spawned, new PlayerSpawnedEventArgs(player));
-
-                string userId = player.UserId;
-                if (string.IsNullOrEmpty(userId))
-                    return;
-
-                if (VerifiedPlayersCache.Verified.Add(userId))
-                    On(_verified, new PlayerVerifiedEventArgs(player));
-
-                if (CreditTagsHandler.IsContributor(player))
-                    CreditTagsHandler.ApplyContributorTag(player);
             }; 
 
             PlayerEvents.Dying += ev =>
                 On(_dying, new PlayerDyingEventArgs(ev.Player, ev.Attacker, ev.DamageHandler.ToString()));
-
             PlayerEvents.Hurting += ev =>
                 On(_hurting, new PlayerHurtingEventArgs(ev.Player, ev.Attacker, ev.DamageHandler.GetHashCode()));
 
             PlayerEvents.ChangingRole += ev =>
-                On(_changingRole, new PlayerChangingRoleEventArgs(ev.Player, ev.NewRole, ev.OldRole));
+                On(_changingRole, new PlayerChangingRoleEventArgs(ev.Player, ev.OldRole, ev.NewRole));
 
             PlayerEvents.ChangedRole += ev =>
                 On(_changedRole, new PlayerChangedRoleEventArgs(
@@ -211,6 +219,9 @@ namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Events.Hand
             
             PlayerEvents.Kicked += ev =>
                 On(_kicked, new PlayerKickedEventArgs(ev.Player, ev.Reason));
+            
+            Scp914Events.ProcessedPlayer += ev =>
+                On(_upgrading, new UpgradingPlayersEventArgs(ev.Player, ev.KnobSetting));
 
             Log.Success("[PurgaLib] PlayerHandler registered on LabAPI.");
         }

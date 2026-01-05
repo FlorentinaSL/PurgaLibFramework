@@ -16,7 +16,7 @@ namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibLoader
         public override string Name { get; } = "PurgaLibLoader";
         public override string Description { get; } = "The loader of PurgaLib";
         public override string Author { get; } = "Florentina";
-        public override Version Version { get; } = new Version(0, 0, 7);
+        public override Version Version { get; } = new Version(0, 0, 8);
         public override Version RequiredApiVersion { get; } = new Version(1,0,0,0);
         public override LoadPriority Priority { get; } = LoadPriority.Lowest;
 
@@ -31,9 +31,6 @@ namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibLoader
             CustomRoleHandler.RegisterEvents();
             CustomItemHandler.RegisterEvents();
             
-            _purgaLoader = new PurgaLoader();
-            _purgaLoader.LoadPlugins();
-            
             Instance = this;
             
             Logger.Raw($"PurgaLib Version: {Version}", ConsoleColor.Red);
@@ -47,13 +44,16 @@ Welcome to:
 ██║     ╚██████╔╝██║  ██║╚██████╔╝██║  ██║███████╗██║██████╔╝
 ╚═╝      ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝╚═════╝ [*] by Florentina
 ", ConsoleColor.DarkMagenta);
+            
+            _purgaLoader = new PurgaLoader();
+            _purgaLoader.LoadPlugins();
         }
 
         public override void Disable()
         {
             Instance = null;
             Logger.Raw("Bye bye from PurgaLib", ConsoleColor.Cyan);
-            _purgaLoader.UnloadPlugins();
+            _purgaLoader?.UnloadPlugins();
         }
     }
 }

@@ -4,45 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c01975cb-3816-4a23-ba40-e78c7ddb9fb2" name="Changes" comment="Updated Custom Role &amp; Custom Item and also I added the commands for cr and ci&#10;for give, list, remove etc...&#10;I also resolved some bugs and added new events.&#10;&#10;nuget version 0.0.6 will soon arrive.">
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Features/Door.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Features/Npc.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Features/Server/Cassie.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Features/Server/Map.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/EventArgs/Player/PlayerBannedEventArgs.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/EventArgs/Player/PlayerKickedEventArgs.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibExample/Config.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibExample/Event/PlayerVer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibExample/Event/RoundStarted.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibExample/Example.cs" afterDir="false" />
+    <list default="true" id="c01975cb-3816-4a23-ba40-e78c7ddb9fb2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Features/Player/Player.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/EventArgs/Player/UpgradingPlayersEventArgs.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PurgaLibFramework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PurgaLibFramework/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/NuGet/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/NuGet/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Player/Actions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Features/Player/Actions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Player/List.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Features/Player/List.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Player/State.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Features/Player/State.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Player/Utility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Features/Player/Utility.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Server/Log.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Features/Server/Log.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Server/Round.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Features/Server/Round.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Server/Server.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Features/Server/Server.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibCredit/CreditTagsHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibCredit/CreditTagsHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibCustomItems/Handlers/CustomItemHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibCustomItems/Handlers/CustomItemHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibCustomRoles/Handlers/CustomRoleHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibCustomRoles/Handlers/CustomRoleHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/Handler/Door.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/Handler/Door.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/Handler/Elevator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/Handler/Elevator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Features/Player/Actions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Features/Player/List.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Features/Player/State.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Features/Player/Utility.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/EventArgs/Player/PlayerChangingRoleEventArgs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/EventArgs/Player/PlayerChangingRoleEventArgs.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/EventArgs/Player/PlayerDiedEventArgs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/EventArgs/Player/PlayerDiedEventArgs.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/Handler/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/Handler/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/Handler/Round.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/Handler/Round.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/Handler/Tesla.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/Handler/Tesla.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibLoader/Loader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibLoader/Loader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibLoader/PurgaLib_Loader/Command/CustomItemGive.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibLoader/PurgaLib_Loader/Command/CustomItemGive.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibLoader/PurgaLib_Loader/Command/CustomItemList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibLoader/PurgaLib_Loader/Command/CustomItemList.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibLoader/PurgaLib_Loader/Command/CustomRoleGive.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibLoader/PurgaLib_Loader/Command/CustomRoleGive.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibLoader/PurgaLib_Loader/LoaderEvent/PurgaLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibLoader/PurgaLib_Loader/LoaderEvent/PurgaLoader.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Debug/PurgaLibFramework.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/bin/Debug/PurgaLibFramework.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PurgaLibFramework/obj/Debug/PurgaLibFramework.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/obj/Debug/PurgaLibFramework.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PurgaLibFramework/obj/Debug/PurgaLibFramework.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/obj/Debug/PurgaLibFramework.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PurgaLibFramework/obj/Debug/PurgaLibFramework.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/obj/Debug/PurgaLibFramework.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/obj/rider.project.model.nuget.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +121,13 @@
       <workItem from="1767455686022" duration="1216000" />
       <workItem from="1767521158836" duration="6272000" />
       <workItem from="1767568208669" duration="628000" />
-      <workItem from="1767613488087" duration="14321000" />
+      <workItem from="1767613488087" duration="15256000" />
+      <workItem from="1767641444286" duration="54000" />
+      <workItem from="1767643911838" duration="611000" />
+      <workItem from="1767645531199" duration="3250000" />
+      <workItem from="1767650947049" duration="626000" />
+      <workItem from="1767651604581" duration="648000" />
+      <workItem from="1767652817160" duration="817000" />
     </task>
     <task id="LOCAL-00001" summary="Added nuspec for the project.">
       <option name="closed" value="true" />
@@ -190,7 +177,15 @@
       <option name="project" value="LOCAL" />
       <updated>1767566127467</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added API and new Commands.">
+      <option name="closed" value="true" />
+      <created>1767639575434</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1767639575434</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,7 +204,8 @@
     <MESSAGE value="Resolved bugs for Events, added a better a user-friendly API. Added version 0.0.4 on Nuget." />
     <MESSAGE value="Finally... Events that register automatically! version 0.0.5" />
     <MESSAGE value="Updated Custom Role &amp; Custom Item and also I added the commands for cr and ci&#10;for give, list, remove etc...&#10;I also resolved some bugs and added new events.&#10;&#10;nuget version 0.0.6 will soon arrive." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Custom Role &amp; Custom Item and also I added the commands for cr and ci&#10;for give, list, remove etc...&#10;I also resolved some bugs and added new events.&#10;&#10;nuget version 0.0.6 will soon arrive." />
+    <MESSAGE value="Added API and new Commands." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added API and new Commands." />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

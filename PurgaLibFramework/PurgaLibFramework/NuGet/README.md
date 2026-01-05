@@ -11,8 +11,6 @@ Status **ALPHA**
 Usage
 Add `PurgaLibFramework.dll` to LabAPI/plugins/Global and reference it in your plugin project.
 
-For version 0.0.7 ChangeLogs:
-- better API
-- New Custom Item & Custom Role's
-- Npc's
-- Credit Tags
+For version 0.0.8 ChangeLogs:
+- better API for player
+- Added new events

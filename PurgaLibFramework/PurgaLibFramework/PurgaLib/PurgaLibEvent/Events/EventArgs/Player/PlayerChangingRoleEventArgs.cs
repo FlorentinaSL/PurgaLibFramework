@@ -5,11 +5,11 @@ namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Events.Even
     public class PlayerChangingRoleEventArgs : System.EventArgs
     {
         public LabApi.Features.Wrappers.Player Player { get; }
-        public RoleTypeId OldRole { get; }
-        public PlayerRoleBase NewRole { get; set; }
+        public PlayerRoleBase OldRole { get; }
+        public RoleTypeId NewRole { get; set; }
         public bool IsAllowed { get; set; } = true;
 
-        public PlayerChangingRoleEventArgs(LabApi.Features.Wrappers.Player player, RoleTypeId oldRole, PlayerRoleBase newRole)
+        public PlayerChangingRoleEventArgs(LabApi.Features.Wrappers.Player player, PlayerRoleBase oldRole, RoleTypeId newRole)
         {
             Player = player;
             OldRole = oldRole;
