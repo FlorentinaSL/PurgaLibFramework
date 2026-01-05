@@ -3,9 +3,8 @@
 </p>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/f5695a5b-18de-445e-a229-dd0bbebcfa50" alt="PurgaLib Logo" width="689" height="476">
+  <img width="470" height="383" alt="ico" src="https://github.com/user-attachments/assets/7d7d34ad-4734-4ead-b236-58c4a3c9b614" />
 </p>
-
 
 
 <h1 align="center">
