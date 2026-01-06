@@ -9,6 +9,8 @@ namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibAPI.Features.Play
     public class Player
     {
         internal LabApi.Features.Wrappers.Player Base { get; }
+        public ReferenceHub RefHub => Base.ReferenceHub;
+
 
         internal Player(LabApi.Features.Wrappers.Player player)
         {
