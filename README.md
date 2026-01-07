@@ -24,7 +24,11 @@
 </p>
 
 ---
+> [!Tip]
+> If you wanna contribute with the project, need help or just want to know the latest releases? Come to our discord Server:
+> https://discord.gg/PT8zKrUWys
 
+---
 <p align="center">
 <strong>PurgaLib</strong> is a next-generation framework for<br>
 <strong>SCP: Secret Laboratory</strong>
