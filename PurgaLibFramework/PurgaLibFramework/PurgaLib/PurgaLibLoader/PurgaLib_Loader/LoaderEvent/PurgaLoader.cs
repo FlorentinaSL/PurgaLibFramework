@@ -61,7 +61,7 @@ namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibLoader.PurgaLib_L
                             if (requireProp != null && typeof(Version).IsAssignableFrom(requireProp.PropertyType))
                             {
                                 var requiredVersion = (Version)requireProp.GetValue(pluginInstance);
-                                Version currentVersion = new Version(0, 1, 3); 
+                                Version currentVersion = new Version(0, 1, 4); 
                                 if (requiredVersion > currentVersion)
                                 {
                                     Logger.Error($"[PurgaLibFramework] [{pluginName}] Requires PurgaLib version {requiredVersion}. Plugin blocked!");

@@ -11,6 +11,7 @@ public static class Cassie
         bool isSubtitles
     )
     {
+        LabApi.Features.Wrappers.Cassie.Clear();
         LabApi.Features.Wrappers.Cassie.Message(
             message,
             isNoisy: isNoisy,

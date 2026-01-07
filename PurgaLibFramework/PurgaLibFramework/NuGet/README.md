@@ -11,5 +11,6 @@ Status **BETA**
 Usage
 Add `PurgaLibFramework.dll` to LabAPI/plugins/Global and reference it in your plugin project.
 
-For version 0.1.2 ChangeLogs:
-- Added API for currentSpecatingPlayers.
+For version 0.1.4 ChangeLogs:
+- Fixed Tesla ev.IsAllowed
+- Fixed API Cassie
