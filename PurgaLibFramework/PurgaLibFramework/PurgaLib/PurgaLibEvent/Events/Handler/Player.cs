@@ -167,11 +167,10 @@ namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Events.Hand
                     MEC.Timing.CallDelayed(0f, () =>
                     {
                         player.SetRole(PlayerRoles.RoleTypeId.Spectator);
+                        Log.Info($"{ev.Player.Nickname} Is a PurgaLib Contributor!");
+                        CreditVerifiedHandler.Handle(ev.Player);
                     });
                 }
-
-                if (CreditTagsHandler.IsContributor(player))
-                    CreditTagsHandler.ApplyContributorTag(player);
             };
 
             PlayerEvents.Left += ev =>

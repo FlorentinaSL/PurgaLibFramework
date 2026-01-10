@@ -1,42 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using LabApi.Features.Wrappers;
-using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibAPI.Features.Server;
+﻿using LabApi.Features.Wrappers;
+using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibCredit.Features;
 
 namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibCredit
 {
-    public static class CreditTagsHandler
+    public static class CreditVerifiedHandler
     {
-        private static readonly HashSet<string> Contributors = new()
+        public static void Handle(Player player)
         {
-            "76561199548842223@steam"
-        };
-        
-        public static bool IsContributor(Player player)
-        {
-            if (player == null) throw new ArgumentNullException(nameof(player));
-            return Contributors.Contains(player.UserId);
-        }
-        
-        public static void ApplyContributorTag(Player player)
-        {
-            if (player == null) throw new ArgumentNullException(nameof(player));
-
-            if (!IsContributor(player))
+            if (player == null)
                 return;
 
-            Log.Info($"[PurgaLib] {player.Nickname} is a PurgaLib Contributor!");
-            SetPlayerRank(player, "PurgaLibContributor");
-        }
-        
-        private static void SetPlayerRank(Player player, string rank)
-        {
-            if (player == null || string.IsNullOrEmpty(rank))
+            if (!CreditDatabase.TryGetRank(player.UserId, out var rank))
+                return;
+
+            string text = CreditRankFormatter.ToDisplay(rank);
+            if (string.IsNullOrEmpty(text))
                 return;
 
             var roles = player.ReferenceHub.serverRoles;
             roles.GlobalHidden = true;
-            roles.SetText(rank);       
+            roles.SetText(text);
         }
     }
 }

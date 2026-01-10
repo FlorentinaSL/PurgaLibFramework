@@ -408,6 +408,9 @@
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibAPI\Features\Server\Round.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibAPI\Features\Server\Server.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibCredit\CreditTagsHandler.cs" />
+        <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibCredit\Enums\CreditRank.cs" />
+        <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibCredit\Features\DataBase.cs" />
+        <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibCredit\Features\Formatter.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibCustomItems\CustomItem.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibCustomItems\EventsArgs\CustomItemDroppedEventArgs.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibCustomItems\EventsArgs\CustomItemPickedUpEventArgs.cs" />
@@ -478,9 +481,6 @@
     <ItemGroup>
       <None Include="App.config" />
       <None Include="packages.config" />
-    </ItemGroup>
-    <ItemGroup>
-      <Folder Include="PurgaLibFramework\PurgaLib\PurgaLibEvent\Events\EventArgs\SCP\" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

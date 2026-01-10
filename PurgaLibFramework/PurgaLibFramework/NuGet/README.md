@@ -11,6 +11,5 @@ Status **BETA**
 Usage
 Add `PurgaLibFramework.dll` to LabAPI/plugins/Global and reference it in your plugin project.
 
-For version 0.1.6 ChangeLogs:
-- Fixed Commands didn't register (now it works correctly)
-- Now CASSIE has Subtitles
+For version 0.1.7 ChangeLogs:
+- Added Database for CreditTags
