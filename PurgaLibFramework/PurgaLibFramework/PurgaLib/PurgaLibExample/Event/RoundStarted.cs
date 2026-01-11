@@ -7,7 +7,7 @@ public class RoundStarted
 {
     private void RoundStart(object sender, RoundStartingEventArgs ev)
     {
-        Server.BroadCast(Example.Instance.Config.Message, 5);
+        Server.Broadcast(Example.Instance.Config.Message, 5);
     }
 
     public void Register()

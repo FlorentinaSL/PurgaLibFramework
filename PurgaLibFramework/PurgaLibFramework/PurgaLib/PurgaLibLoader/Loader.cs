@@ -16,7 +16,7 @@ namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibLoader
         public override string Name { get; } = "PurgaLibLoader";
         public override string Description { get; } = "The loader of PurgaLib";
         public override string Author { get; } = "Florentina";
-        public override Version Version { get; } = new Version(0, 1, 7);
+        public override Version Version { get; } = new Version(0, 1, 9);
         public override Version RequiredApiVersion { get; } = new Version(1,0,0,0);
         public override LoadPriority Priority { get; } = LoadPriority.Lowest;
 
@@ -33,6 +33,7 @@ namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibLoader
             
             Instance = this;
             
+            Logger.Raw($"PurgaLibAPI Version {PurgaLibAPI.Version.version}", ConsoleColor.DarkRed);
             Logger.Raw($"PurgaLib Version: {Version}", ConsoleColor.Red);
             Logger.Raw(@" 
 Welcome to:

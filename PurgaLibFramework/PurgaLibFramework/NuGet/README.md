@@ -11,5 +11,5 @@ Status **BETA**
 Usage
 Add `PurgaLibFramework.dll` to LabAPI/plugins/Global and reference it in your plugin project.
 
-For version 0.1.8 ChangeLogs:
-- Fixed IsAllowed eventArgs
+For version 0.1.9 ChangeLogs:
+- Added Core, Enums and Extensions to the API making it more reliable

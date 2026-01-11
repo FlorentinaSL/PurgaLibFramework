@@ -1,16 +1,17 @@
 ﻿using System.Collections.Generic;
-using PlayerRoles;
-using UnityEngine;
-using Mirror;
 using MEC;
+using Mirror;
+using PlayerRoles;
+using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibAPI.Features;
+using UnityEngine;
 
-namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibAPI.Features
+namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibAPI.Extensions
 {
-    public class Npc
+    public class Npc : Player
     {
         private static int _nextconid = 1000;
         private static readonly List<Npc> Npcs = new();
-        public static IReadOnlyList<Npc> List => Npcs;
+        public new static IReadOnlyList<Npc> List => Npcs;
 
         private CoroutineHandle _followHandle;
 
@@ -35,16 +36,19 @@ namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibAPI.Features
             return npc;
         }
 
-        internal LabApi.Features.Wrappers.Player Base { get; }
-        private Npc(LabApi.Features.Wrappers.Player player) => Base = player;
+        internal new LabApi.Features.Wrappers.Player Base { get; }
+        protected Npc(LabApi.Features.Wrappers.Player player) : base(player)
+        {
+            Base = player;
+        }
 
-        public string Name => Base.Nickname;
-        public RoleTypeId Role => Base.Role;
-        public Vector3 Position { get => Base.Position; set => Base.Position = value; }
-        public bool IsAlive => Base.IsAlive;
+        public new string Name => Base.Nickname;
+        public new RoleTypeId Role => Base.Role;
+        public new Vector3 Position { get => Base.Position; set => Base.Position = value; }
+        public override bool IsAlive => Base.IsAlive;
 
-        public void SetRole(RoleTypeId role) => Base.SetRole(role);
-        public void Kill(string reason = "NPC killed") { if (!Base.IsAlive) return; Base.Kill(reason); }
+        public new void SetRole(RoleTypeId role) => Base.SetRole(role);
+        public new void Kill(string reason = "NPC killed") { if (!Base.IsAlive) return; Base.Kill(reason); }
         public void Destroy(string reason = "NPC destroyed") { NetworkServer.Destroy(Base.GameObject); Npcs.Remove(this); }
         
         public void TeleportToPlayer(LabApi.Features.Wrappers.Player target)

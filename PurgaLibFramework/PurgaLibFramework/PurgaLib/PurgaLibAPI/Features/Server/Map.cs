@@ -1,26 +1,46 @@
-﻿using UnityEngine;
+﻿using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibAPI.Core;
+using UnityEngine;
 
-namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibAPI.Features.Server;
-
-public static class Map
+namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibAPI.Features.Server
 {
-    public static void TurnOffAllLights(ushort duration)
+    public sealed class MapActor : PActor
     {
-        LabApi.Features.Wrappers.Map.TurnOffLights(duration);
+        public void TurnOffAllLights(ushort duration)
+        {
+            LabApi.Features.Wrappers.Map.TurnOffLights(duration);
+        }
+
+        public void ResetAllLights()
+        {
+            LabApi.Features.Wrappers.Map.ResetColorOfLights();
+        }
+
+        public void SetColorOfAllLights(Color color)
+        {
+            LabApi.Features.Wrappers.Map.SetColorOfLights(color);
+        }
+
+        public void TurnOnAllLights()
+        {
+            LabApi.Features.Wrappers.Map.TurnOnLights();
+        }
+
+        public override bool IsAlive => true;
+        public override Transform Transform => null;
+
+        protected override void Tick() { }
     }
 
-    public static void ResetAllLights()
+    public static class Map
     {
-        LabApi.Features.Wrappers.Map.ResetColorOfLights();
-    }
+        private static readonly MapActor Core = StaticActor.Get<MapActor>();
 
-    public static void SetColorOfAllLights(Color color)
-    {
-        LabApi.Features.Wrappers.Map.SetColorOfLights(color);
-    }
+        public static void TurnOffAllLights(ushort duration) => Core.TurnOffAllLights(duration);
 
-    public static void TurnOnAllLights()
-    {
-        PluginAPI.Core.Map.TurnOnAllLights();
+        public static void ResetAllLights() => Core.ResetAllLights();
+
+        public static void SetColorOfAllLights(Color color) => Core.SetColorOfAllLights(color);
+
+        public static void TurnOnAllLights() => Core.TurnOnAllLights();
     }
 }
