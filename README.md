@@ -30,7 +30,7 @@
 
 > [!Note]
 > Nuget Package: https://www.nuget.org/packages/PurgaLibFramework
-> Command: dotnet add package PurgaLibFramework --version 0.1.4
+> Command: dotnet add package PurgaLibFramework --version 0.1.7
 ---
 <p align="center">
 <strong>PurgaLib</strong> is a next-generation framework for<br>
