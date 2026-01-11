@@ -33,9 +33,17 @@ namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Events.Hand
         {
             PlayerEvents.InteractingElevator += ev =>
             {
-                var args = new ElevatorUsingEventArgs(ev.Player, ev.Elevator);
+                var args = new ElevatorUsingEventArgs(ev.Player, ev.Elevator)
+                {
+                    IsAllowed = true
+                };
                 OnInteracting(args);
+                
+                if(!args.IsAllowed)
+                    ev.IsAllowed = false;
+            
             };
+            
             Log.Success("[PurgaLib] ElevatorHandler registered on LabApi.");
         }
     }

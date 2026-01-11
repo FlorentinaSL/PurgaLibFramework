@@ -11,5 +11,5 @@ Status **BETA**
 Usage
 Add `PurgaLibFramework.dll` to LabAPI/plugins/Global and reference it in your plugin project.
 
-For version 0.1.7 ChangeLogs:
-- Added Database for CreditTags
+For version 0.1.8 ChangeLogs:
+- Fixed IsAllowed eventArgs

@@ -33,8 +33,15 @@ namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Events.Hand
         {
             PlayerEvents.InteractingDoor += ev =>
             {
-                var args = new DoorInteractingEventArgs(ev.Player, ev.Door);
+                var args = new DoorInteractingEventArgs(ev.Player, ev.Door)
+                {
+                    IsAllowed =  true
+                };
                 OnInteracting(args);
+                
+                if (!args.IsAllowed) 
+                    ev.IsAllowed = false;
+                
             };
             Log.Success("[PurgaLib] DoorHandler registered on LabApi.");
         }

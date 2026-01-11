@@ -5,19 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c01975cb-3816-4a23-ba40-e78c7ddb9fb2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibCredit/Enums/CreditRank.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibCredit/Features/DataBase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibCredit/Features/Formatter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PurgaLibFramework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PurgaLibFramework/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/NuGet/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/NuGet/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibCredit/CreditTagsHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibCredit/CreditTagsHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/Handler/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/Handler/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibLoader/Loader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibLoader/Loader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibLoader/PurgaLib_Loader/LoaderEvent/PurgaLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibLoader/PurgaLib_Loader/LoaderEvent/PurgaLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/EventArgs/Map/OnElevatorUsing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/EventArgs/Map/OnElevatorUsing.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/Handler/Door.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/Handler/Door.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/Handler/Elevator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/Handler/Elevator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Debug/PurgaLibFramework.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/bin/Debug/PurgaLibFramework.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Debug/PurgaLibFramework.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/bin/Debug/PurgaLibFramework.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/obj/Debug/PurgaLibFramework.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/obj/Debug/PurgaLibFramework.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PurgaLibFramework/obj/Debug/PurgaLibFramework.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/obj/Debug/PurgaLibFramework.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PurgaLibFramework/obj/Debug/PurgaLibFramework.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/obj/Debug/PurgaLibFramework.pdb" afterDir="false" />
     </list>
@@ -27,7 +21,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="78" />
+    <option name="cachedIndexableFilesCount" value="81" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -62,9 +56,9 @@
     <setting file="file://$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/Handler/Elevator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/Handler/Tesla.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
-  <component name="HttpClientOnboardingState"><![CDATA[{
-  "isOnboardingCommentShown": true
-}]]></component>
+  <component name="HttpClientOnboardingState">{
+  &quot;isOnboardingCommentShown&quot;: true
+}</component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
@@ -103,7 +97,7 @@
   }
 }</component>
   <component name="RecapUselessUpdatesCounter">
-    <option name="suspendCountdown" value="6" />
+    <option name="suspendCountdown" value="4" />
   </component>
   <component name="RunManager">
     <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" useMixedMode="false">
@@ -164,7 +158,8 @@
       <workItem from="1767908249238" duration="28000" />
       <workItem from="1767973763645" duration="4620000" />
       <workItem from="1767989885246" duration="8319000" />
-      <workItem from="1768062557813" duration="6302000" />
+      <workItem from="1768062557813" duration="7816000" />
+      <workItem from="1768131480709" duration="566000" />
     </task>
     <task id="LOCAL-00001" summary="Added nuspec for the project.">
       <option name="closed" value="true" />
@@ -278,7 +273,15 @@
       <option name="project" value="LOCAL" />
       <updated>1767997535085</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Fixed CreditTagsHandler.cs for version 0.1.7">
+      <option name="closed" value="true" />
+      <created>1768069389574</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1768069389574</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,7 +308,8 @@
     <MESSAGE value="fixes" />
     <MESSAGE value="Version 0.1.6&#10;- Fixed Command didn't register&#10;- Now CASSIE has Subtitles" />
     <MESSAGE value="Version 0.1.6" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 0.1.6" />
+    <MESSAGE value="Fixed CreditTagsHandler.cs for version 0.1.7" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed CreditTagsHandler.cs for version 0.1.7" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
