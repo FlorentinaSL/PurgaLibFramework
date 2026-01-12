@@ -7,7 +7,7 @@ Include `PurgaLibFramework.dll` in your C# plugin project.
 Place it in **LabAPI/plugins/Global**.
 OR:
 **you can simply search the pack in nuget, the name is PurgaLibFramework.**
-`dotnet add package PurgaLibFramework --version 0.0.1`
+`dotnet add package PurgaLibFramework --version 0.1.9`
 
 ### 2️⃣ Create `Config.cs`
 ```csharp
@@ -35,7 +35,7 @@ namespace ExamplePurgaLib
         public override string Author { get; } = "Florentina<3";
         public override string Description { get; } = "Test plugin for PurgaLib";
         public override Version Version { get; } = new Version(0,0,1);
-        public override Version RequiredPurgaLibVersion { get; } = new Version(0,0,7);
+        public override Version RequiredPurgaLibVersion { get; } = new Version(0,1,9);
         
         protected override void OnEnabled()
         {
