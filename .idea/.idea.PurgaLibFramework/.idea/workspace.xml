@@ -6,17 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="c01975cb-3816-4a23-ba40-e78c7ddb9fb2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PurgaLibFramework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PurgaLibFramework/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Features/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Features/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibLoader/Loader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibLoader/Loader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibLoader/PurgaLib_Loader/LoaderEvent/PurgaLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibLoader/PurgaLib_Loader/LoaderEvent/PurgaLoader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/PurgaLibFramework.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/PurgaLibFramework.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/NuGet/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/NuGet/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/NuGet/pack.nuspec" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/NuGet/pack.nuspec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/PurgaLibFramework.dll" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/PurgaLibFramework.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/PurgaLibFramework.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/obj/PurgaLibFramework.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/obj/PurgaLibFramework.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/obj/Release/PurgaLibFramework.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/obj/Release/PurgaLibFramework.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PurgaLibFramework/obj/Release/PurgaLibFramework.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/obj/Release/PurgaLibFramework.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PurgaLibFramework/obj/Release/PurgaLibFramework.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/obj/Release/PurgaLibFramework.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PurgaLibFramework/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PurgaLibFramework/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/obj/rider.project.restore.info" afterDir="false" />
     </list>
@@ -200,7 +196,8 @@
       <workItem from="1768328265358" duration="7229000" />
       <workItem from="1768386278512" duration="2591000" />
       <workItem from="1768396009694" duration="4706000" />
-      <workItem from="1768406025029" duration="2161000" />
+      <workItem from="1768406025029" duration="3231000" />
+      <workItem from="1768411674371" duration="329000" />
     </task>
     <task id="LOCAL-00001" summary="Added nuspec for the project.">
       <option name="closed" value="true" />
@@ -386,7 +383,15 @@
       <option name="project" value="LOCAL" />
       <updated>1768407004222</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Resolved Bugs">
+      <option name="closed" value="true" />
+      <created>1768408206939</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1768408206939</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -433,7 +438,8 @@
     <MESSAGE value="Auto WhiteList fix" />
     <MESSAGE value="Verision 1.3.0 Updates" />
     <MESSAGE value="Player.Get can now be on ICommandSender" />
-    <option name="LAST_COMMIT_MESSAGE" value="Player.Get can now be on ICommandSender" />
+    <MESSAGE value="Resolved Bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Resolved Bugs" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
