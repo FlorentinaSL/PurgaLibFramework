@@ -104,9 +104,9 @@ This project is protected by <strong>Copyright</strong>.
   <a href="https://github.com/FlorentinaSL/PurgaLibFramework/tree/PluginTutorial" target="_blank">
     <img src="https://img.shields.io/badge/Plugin_Creation_Tutorial-yellow?style=for-the-badge&logo=github&logoColor=white" alt="Plugin Creation Tutorial"/>
   </a>
-  <img src="https://img.shields.io/badge/README-English-blue?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/README-Italian-green?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/More_Languages-Coming_Soon-lightgrey?style=for-the-badge"/>
+  <a href="https://github.com/FlorentinaSL/PurgaLibFramework/tree/README's" target="_blank">
+    <img src="https://img.shields.io/badge/README-Link Localizer-blue?style=for-the-badge"/>
+  </a>
 </p>
 
 ---
