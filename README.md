@@ -1,5 +1,5 @@
 <p align="center">
-  https://github.com/FlorentinaSL/PurgaLibFramework
+  <a href = "https://github.com/FlorentinaSL/PurgaLibFramework">Repo Link</a>
 </p>
 
 <p align="center">
@@ -12,7 +12,7 @@
 </h1>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Status-BETA-orange?style=for-the-badge&logo=testinglibrary"/>
+  <img src="https://img.shields.io/badge/Status-Release-green?style=for-the-badge&logo=testinglibrary"/>
   <img src="https://img.shields.io/badge/Platform-SCP:_Secret_Laboratory-black?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/Language-C%23-239120?style=for-the-badge&logo=csharp&logoColor=white"/>
   <img src="https://img.shields.io/badge/Build-Passing-brightgreen?style=for-the-badge&logo=githubactions"/>
@@ -30,7 +30,7 @@
 
 > [!Note]
 > Nuget Package: https://www.nuget.org/packages/PurgaLibFramework
-> Command: dotnet add package PurgaLibFramework --version 0.1.9
+> Command: dotnet add package PurgaLibFramework --version 1.2.0
 ---
 <p align="center">
 <strong>PurgaLib</strong> is a next-generation framework for<br>
@@ -44,12 +44,10 @@ PurgaLib focuses on clean architecture and event-driven design.
 
 ---
 
-<h2 align="center">⚠️ Development Status</h2>
+<h2 align="center">Release Status</h2>
 
 <p align="center">
-PurgaLib is currently in <strong>ALPHA</strong> stage.<br><br>
-While it does not yet include all advanced utilities available in <strong>EXILED</strong>,<br>
-<strong>all core and gameplay events are fully implemented</strong>.
+PurgaLib is currently in <strong>Release</strong> stage.
 </p>
 
 <p align="center">
@@ -104,9 +102,9 @@ This project is protected by <strong>Copyright</strong>.
   <a href="https://github.com/FlorentinaSL/PurgaLibFramework/tree/PluginTutorial" target="_blank">
     <img src="https://img.shields.io/badge/Plugin_Creation_Tutorial-yellow?style=for-the-badge&logo=github&logoColor=white" alt="Plugin Creation Tutorial"/>
   </a>
-  <img src="https://img.shields.io/badge/README-English-blue?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/README-Italian-green?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/More_Languages-Coming_Soon-lightgrey?style=for-the-badge"/>
+  <a href="https://github.com/FlorentinaSL/PurgaLibFramework/tree/README's" target="_blank">
+    <img src="https://img.shields.io/badge/README-Link Localizer-blue?style=for-the-badge"/>
+  </a>
 </p>
 
 ---
