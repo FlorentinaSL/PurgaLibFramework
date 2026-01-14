@@ -11,7 +11,7 @@
 </h1>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Status-BETA-orange?style=for-the-badge&logo=testinglibrary"/>
+  <img src="https://img.shields.io/badge/Status-Release-green?style=for-the-badge&logo=testinglibrary"/>
   <img src="https://img.shields.io/badge/Platform-SCP:_Secret_Laboratory-black?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/Language-C%23-239120?style=for-the-badge&logo=csharp&logoColor=white"/>
   <img src="https://img.shields.io/badge/Build-Passing-brightgreen?style=for-the-badge&logo=githubactions"/>
