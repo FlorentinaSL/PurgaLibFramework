@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/FlorentinaSL/PurgaLibFramework">
-    <img width="200" alt="PurgaLib Logo" src="https://github.com/user-attachments/assets/7d7d34ad-4734-4ead-b236-58c4a3c9b614" />
+    <img width="500" height="500" alt="PurgaLib Framework" src="https://github.com/user-attachments/assets/662151a1-c2ab-4a66-8da0-bd7ef612771c" />
   </a>
 </p>
 
