@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <img width="470" height="383" alt="ico" src="https://github.com/user-attachments/assets/7d7d34ad-4734-4ead-b236-58c4a3c9b614" />
+  <img width="500" height="500" alt="PurgaLib Framework" src="https://github.com/user-attachments/assets/662151a1-c2ab-4a66-8da0-bd7ef612771c" />
 </p>
 
 
@@ -30,7 +30,7 @@
 
 > [!Note]
 > Nuget Package: https://www.nuget.org/packages/PurgaLibFramework
-> Command: dotnet add package PurgaLibFramework --version 1.2.0
+> Command: dotnet add package PurgaLibFramework --version 1.6.0
 ---
 <p align="center">
 <strong>PurgaLib</strong> is a next-generation framework for<br>
