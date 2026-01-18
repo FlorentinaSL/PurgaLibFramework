@@ -1,60 +1,67 @@
 ﻿using System;
 using HarmonyLib;
 using PlayerStatsSystem;
-using PurgaLibEvents.PurgaLibEvent.Events.EventArgs.Player;
-using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibAPI.Enums;
 using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibAPI.Features.Server;
 using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Attribute;
+using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Events.EventArgs.Player;
 using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Events.Handler;
 
-namespace PurgaLibEvents.PurgaLibEvent.Patch.Player;
-
-[PurgaLibEventPatcher(typeof(PlayerHandler), nameof(PlayerHandler.OnDying))]
-[PurgaLibEventPatcher(typeof(PlayerHandler), nameof(PlayerHandler.OnDied))]
-[HarmonyPatch(typeof(PlayerStats), "KillPlayer", MethodType.Normal)]
-public static class DyingDiedPatch
+namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Patch.Player
 {
-    private static void Prefix(PlayerStats __instance, PlayerStats source = null, string reason = "")
+    [EventPatch(typeof(PlayerHandler), nameof(PlayerHandler.OnDied))]
+    [EventPatch(typeof(PlayerHandler), nameof(PlayerHandler.OnDying))]
+    [HarmonyPatch(typeof(PlayerStats), nameof(PlayerStats.KillPlayer))]
+    public static class KillPlayerPatch
     {
-        try
+        [HarmonyPrefix]
+        public static void Prefix(PlayerStats __instance, DamageHandlerBase handler)
         {
-            var hub = __instance.gameObject.GetComponent<ReferenceHub>();
-            if (hub == null) return;
-
-            var player = new PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibAPI.Features.Player(hub);
-            if (source != null)
+            try
             {
-                var attackerHub = source.gameObject.GetComponent<ReferenceHub>();
-                if (attackerHub != null)
-                {
-                    var attacker = new PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibAPI.Features.Player(attackerHub);
-                    PlayerHandler.OnDying(new PlayerDyingEventArgs(player, attacker, reason));
-                }
-            }
-            
-        }
-        catch (Exception e)
-        {
-            Log.Error($"Error in DyingDiedPatch Prefix: {e}");
-        }
-    }
+                var hub = __instance._hub;
+                if (hub == null) return;
 
-    private static void Postfix(PlayerStats __instance, PlayerStats source = null)
-    {
-        try
-        {
-            var hub = __instance.gameObject.GetComponent<ReferenceHub>();
-            if (hub == null) return;
-    
-            var player = new PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibAPI.Features.Player(hub);
-            var attackerHub = source.gameObject.GetComponent<ReferenceHub>();
-            var attacker = new PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibAPI.Features.Player(attackerHub);
-            
-            PlayerHandler.OnDied(new PlayerDiedEventArgs(player, attacker, DamageType.None.GetHashCode()));
+                var victim = new PurgaLibAPI.Features.Player(hub);
+                var attacker = GetAttacker(handler);
+                var reason = handler?.ServerLogsText ?? "Unknown";
+
+                PlayerHandler.OnDying(new PlayerDyingEventArgs(victim, attacker, reason));
+
+                Log.Success($"[Prefix:{nameof(PlayerStats.KillPlayer)}] {victim.Nickname} is about to die, attacker: {attacker?.Nickname ?? "None"}");
+            }
+            catch (Exception e)
+            {
+                Log.Error($"[KillPlayerPatch:Prefix] {e}");
+            }
         }
-        catch (Exception e)
+
+        [HarmonyPostfix]
+        public static void Postfix(PlayerStats __instance, DamageHandlerBase handler)
         {
-            Log.Error($"Error in DyingDiedPatch Postfix: {e}");
+            try
+            {
+                var hub = __instance._hub; 
+                if (hub == null) return;
+
+                var victim = new PurgaLibAPI.Features.Player(hub);
+                var attacker = GetAttacker(handler);
+
+                PlayerHandler.OnDied(new PlayerDiedEventArgs(victim, attacker, handler?.GetHashCode() ?? 0));
+
+                Log.Success($"[Postfix:{nameof(PlayerStats.KillPlayer)}] {victim.Nickname} has died, attacker: {attacker?.Nickname ?? "None"}");
+            }
+            catch (Exception e)
+            {
+                Log.Error($"[KillPlayerPatch:Postfix] {e}");
+            }
+        }
+
+        private static PurgaLibAPI.Features.Player GetAttacker(DamageHandlerBase handler)
+        {
+            if (handler is AttackerDamageHandler attackerHandler && attackerHandler.Attacker.Hub != null)
+                return new PurgaLibAPI.Features.Player(attackerHandler.Attacker.Hub);
+
+            return null;
         }
     }
 }

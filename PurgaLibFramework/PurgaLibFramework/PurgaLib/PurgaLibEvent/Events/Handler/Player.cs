@@ -1,25 +1,25 @@
-﻿using PurgaLibEvents.PurgaLibEvent.Attribute;
-using PurgaLibEvents.PurgaLibEvent.Events.EventArgs.Player;
-using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibCustomItems.EventsArgs;
+﻿using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibCustomItems.EventsArgs;
+using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Attribute;
+using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Events.EventArgs.Player;
 
 namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Events.Handler
 {
     public static class PlayerHandler
     {
-        public static Event<PlayerJoinedEventArgs> Joined; 
-        public static Event<PlayerLeftEventArgs> Left; 
-        public static Event<PlayerVerifiedEventArgs> Verified; 
-        public static Event<PlayerHurtingEventArgs> Hurting; 
-        public static Event<PlayerDyingEventArgs> Dying;
-        public static Event<PlayerDiedEventArgs> Died;
-        public static Event<PlayerChangingRoleEventArgs> ChangingRole;
-        public static Event<PlayerChangedRoleEventArgs> ChangedRole;
-        public static Event<PlayerSpawningEventArgs> Spawning; 
-        public static Event<PlayerSpawnedEventArgs> Spawned;
-        public static Event<PlayerBannedEventArgs> Banned;
-        public static Event<PlayerKickedEventArgs> Kicked;
-        public static Event<UpgradingPlayersEventArgs> Upgrading;
-        public static Event<CustomItemPickedUpEventArgs> ItemPickedUp;
+        public static Event<PlayerJoinedEventArgs> Joined { get; set; } = new(); 
+        public static Event<PlayerLeftEventArgs> Left { get; set; } = new(); 
+        public static Event<PlayerVerifiedEventArgs> Verified { get; set; } = new(); 
+        public static Event<PlayerHurtingEventArgs> Hurting { get; set; } = new(); 
+        public static Event<PlayerDyingEventArgs> Dying { get; set; } = new();
+        public static Event<PlayerDiedEventArgs> Died { get; set; } = new();
+        public static Event<PlayerChangingRoleEventArgs> ChangingRole { get; set; } = new();
+        public static Event<PlayerChangedRoleEventArgs> ChangedRole { get; set; } = new();
+        public static Event<PlayerSpawningEventArgs> Spawning { get; set; } = new(); 
+        public static Event<PlayerSpawnedEventArgs> Spawned { get; set; } = new();
+        public static Event<PlayerBannedEventArgs> Banned { get; set; } = new();
+        public static Event<PlayerKickedEventArgs> Kicked { get; set; } = new();
+        public static Event<UpgradingPlayersEventArgs> Upgrading { get; set; } = new();
+        public static Event<CustomItemPickedUpEventArgs> ItemPickedUp { get; set; } = new();
 
         internal static void OnJoined(PlayerJoinedEventArgs ev) => Joined?.Invoke(ev);
         internal static void OnLeft(PlayerLeftEventArgs ev) => Left?.Invoke(ev);

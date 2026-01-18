@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     ".NETFramework,Version=v4.8": {
+      "AssemblyPublicizer/1.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net472/_._": {}
+        },
+        "runtime": {
+          "lib/net472/AssemblyPublicizer.dll": {}
+        },
+        "build": {
+          "build/AssemblyPublicizer.props": {}
+        }
+      },
       "Microsoft.Bcl.AsyncInterfaces/10.0.1": {
         "type": "package",
         "dependencies": {
@@ -359,6 +371,18 @@
       }
     },
     ".NETFramework,Version=v4.8/win": {
+      "AssemblyPublicizer/1.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net472/_._": {}
+        },
+        "runtime": {
+          "lib/net472/AssemblyPublicizer.dll": {}
+        },
+        "build": {
+          "build/AssemblyPublicizer.props": {}
+        }
+      },
       "Microsoft.Bcl.AsyncInterfaces/10.0.1": {
         "type": "package",
         "dependencies": {
@@ -716,6 +740,18 @@
       }
     },
     ".NETFramework,Version=v4.8/win-arm64": {
+      "AssemblyPublicizer/1.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net472/_._": {}
+        },
+        "runtime": {
+          "lib/net472/AssemblyPublicizer.dll": {}
+        },
+        "build": {
+          "build/AssemblyPublicizer.props": {}
+        }
+      },
       "Microsoft.Bcl.AsyncInterfaces/10.0.1": {
         "type": "package",
         "dependencies": {
@@ -1073,6 +1109,18 @@
       }
     },
     ".NETFramework,Version=v4.8/win-x64": {
+      "AssemblyPublicizer/1.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net472/_._": {}
+        },
+        "runtime": {
+          "lib/net472/AssemblyPublicizer.dll": {}
+        },
+        "build": {
+          "build/AssemblyPublicizer.props": {}
+        }
+      },
       "Microsoft.Bcl.AsyncInterfaces/10.0.1": {
         "type": "package",
         "dependencies": {
@@ -1430,6 +1478,18 @@
       }
     },
     ".NETFramework,Version=v4.8/win-x86": {
+      "AssemblyPublicizer/1.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net472/_._": {}
+        },
+        "runtime": {
+          "lib/net472/AssemblyPublicizer.dll": {}
+        },
+        "build": {
+          "build/AssemblyPublicizer.props": {}
+        }
+      },
       "Microsoft.Bcl.AsyncInterfaces/10.0.1": {
         "type": "package",
         "dependencies": {
@@ -1788,6 +1848,19 @@
     }
   },
   "libraries": {
+    "AssemblyPublicizer/1.0.2": {
+      "sha512": "PrswO/TWBYxdjuqKfJ89sTi4+fUAzQpwo3tHawVskYUQOr20BTQEm8+6bCzJ3aF0ABVFhPcnaZ1IAYAl2+FHAQ==",
+      "type": "package",
+      "path": "assemblypublicizer/1.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "assemblypublicizer.1.0.2.nupkg.sha512",
+        "assemblypublicizer.nuspec",
+        "build/AssemblyPublicizer.props",
+        "lib/net472/AssemblyPublicizer.dll"
+      ]
+    },
     "Microsoft.Bcl.AsyncInterfaces/10.0.1": {
       "sha512": "E1HSLkPHXEO30JEij2pWbOuzz1Z5ND4a5l7IP1T2RgQuE0a0NzEIvtO64RNy3Otn6PFezbT80cfm3M/Cgt70PA==",
       "type": "package",
@@ -2318,6 +2391,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.8": [
+      "AssemblyPublicizer >= 1.0.2",
       "Microsoft.Extensions.Configuration.Json >= 10.0.1"
     ]
   },
@@ -2368,6 +2442,12 @@
       "net48": {
         "targetAlias": "net48",
         "dependencies": {
+          "AssemblyPublicizer": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[1.0.2, )"
+          },
           "Microsoft.Extensions.Configuration.Json": {
             "target": "Package",
             "version": "[10.0.1, )"

@@ -1,45 +1,34 @@
 ﻿using System;
 using HarmonyLib;
-using PlayerRoles;
-using PurgaLibEvents.PurgaLibEvent.Events.EventArgs.Player;
 using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibAPI.Features.Server;
-using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibCredit;
 using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Attribute;
 using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Events.EventArgs.Player;
 using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Events.Handler;
 
-namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Patch.Player;
-
-[PurgaLibEventPatcher(typeof(PlayerHandler), nameof(PlayerHandler.OnJoined))]
-[HarmonyPatch(typeof(ReferenceHub), "Start", MethodType.Normal)]
-public static class JoinedPatch
+namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Patch.Player   
 {
-    private static void Postfix(ReferenceHub __instance)
+    [EventPatch(typeof(PlayerHandler), nameof(PlayerHandler.OnJoined))]
+    [HarmonyPatch(typeof(ReferenceHub), nameof(ReferenceHub.Start))]
+    internal static class JoinedPatch
     {
-        try
+        private static void Postfix(ReferenceHub __instance)
         {
-            var player = new global::PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibAPI.Features.Player(__instance);
-            var verp = new PlayerVerifiedEventArgs(player);
-            var joined = new PlayerJoinedEventArgs(player);
-            PlayerHandler.OnJoined(joined);
-            string userId = player.UserId;
-            if (string.IsNullOrEmpty(userId))
-                return;
-    
-            if (VerifiedPlayersCache.Verified.Add(userId))
+            try
             {
-                PlayerHandler.OnVerified(verp);
+                if (__instance == null)
+                    return;
 
-                MEC.Timing.CallDelayed(0f, () =>
-                {
-                    verp.Player.SetRole(RoleTypeId.Spectator);
-                    CreditVerifiedHandler.Handle(player);
-                });
+                var player = new PurgaLibAPI.Features.Player(__instance);
+
+                PlayerHandler.OnJoined(new PlayerJoinedEventArgs(player));
+
+                Log.Success("JOINED PATCH CALLED");
+            }
+            catch (Exception e)
+            {
+                Log.Error($"JoinedPatch error:\n{e}");
             }
         }
-        catch (Exception e)
-        {
-            Log.Error($"Error in OnJoined: {e}");
-        }
     }
+
 }

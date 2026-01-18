@@ -5,54 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c01975cb-3816-4a23-ba40-e78c7ddb9fb2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/DamageHandler/DamageHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Enums/DoorLockType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Features/Elevator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Features/Item.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Attribute/Interfaces/IEvent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Attribute/PatchALL.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Patch/Door/InteractingPatch.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Patch/Elevator/InteractingElevatorPatch.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Patch/Player/BannedPatch.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Patch/Player/ChangingRole&amp;Spawn.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Patch/Player/Dying&amp;Died.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Patch/Player/HurtingPatch.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Patch/Player/JoinedPatch.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Patch/Player/Kicked.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Patch/Player/LeftPatch.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Patch/Player/PickUpPatch.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Patch/Player/UpgradingPatch.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Patch/Round/RoundEnded.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Patch/Round/RoundRestarting.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Patch/Round/RoundStarted.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Patch/Tesla/InteractingTesla.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Attribute/Patcher.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Patch/Player/VerifiedPatch.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PurgaLibFramework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PurgaLibFramework/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PurgaLibFramework.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/Properties/AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/Properties/AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Extensions/DoorExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Extensions/DoorExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Extensions/Npc.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Extensions/Npc.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Extensions/PlayerExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Extensions/PlayerExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Extensions/ServerExtensions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Features/Door.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Features/Door.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/NuGet/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/NuGet/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Features/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Features/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Features/Server/Cassie.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Features/Server/Cassie.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Features/Server/Log.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Features/Server/Log.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Features/Server/Map.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Features/Server/Map.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Features/Server/Round.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Features/Server/Round.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Features/Server/Server.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Features/Server/Server.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Version.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Version.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibCustomItems/CustomItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibCustomItems/CustomItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibCustomItems/EventsArgs/CustomItemDroppedEventArgs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibCustomItems/EventsArgs/CustomItemDroppedEventArgs.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibCustomItems/EventsArgs/CustomItemPickedUpEventArgs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibCustomItems/EventsArgs/CustomItemPickedUpEventArgs.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibCustomItems/EventsArgs/CustomItemUsedEventArgs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibCustomItems/EventsArgs/CustomItemUsedEventArgs.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibCustomItems/Handlers/CustomItemHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibCustomItems/Handlers/CustomItemHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibCustomRoles/CustomRole.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibCustomRoles/CustomRole.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibCustomRoles/Handlers/CustomRoleHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibCustomRoles/Handlers/CustomRoleHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Attribute/Attribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Attribute/Attribute.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Attribute/Attribute.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Attribute/Event{T}.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Attribute/Event{T}.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Attribute/IEvent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/EventArgs/Map/OnDoorInteracting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/EventArgs/Map/OnDoorInteracting.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/EventArgs/Map/OnElevatorUsing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/EventArgs/Map/OnElevatorUsing.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Attribute/PatchALL.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/EventArgs/Map/OnInteractingTesla.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/EventArgs/Map/OnInteractingTesla.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/EventArgs/Player/PlayerBannedEventArgs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/EventArgs/Player/PlayerBannedEventArgs.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/EventArgs/Player/PlayerChangedRoleEventArgs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/EventArgs/Player/PlayerChangedRoleEventArgs.cs" afterDir="false" />
@@ -71,150 +36,34 @@
       <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/Handler/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/Handler/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/Handler/Round.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/Handler/Round.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/Handler/Tesla.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Events/Handler/Tesla.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Patch/Door/InteractingPatch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Patch/Door/InteractingPatch.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Patch/Elevator/InteractingElevatorPatch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Patch/Elevator/InteractingElevatorPatch.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Patch/Player/BannedPatch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Patch/Player/BannedPatch.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Patch/Player/ChangingRole&amp;Spawn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Patch/Player/ChangingRole&amp;Spawn.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Patch/Player/Dying&amp;Died.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Patch/Player/Dying&amp;Died.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Patch/Player/HurtingPatch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Patch/Player/HurtingPatch.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Patch/Player/JoinedPatch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Patch/Player/JoinedPatch.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Patch/Player/Kicked.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Patch/Player/Kicked.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Patch/Player/LeftPatch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Patch/Player/LeftPatch.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Patch/Player/PickUpPatch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Patch/Player/PickUpPatch.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Patch/Player/UpgradingPatch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Patch/Player/UpgradingPatch.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Patch/Round/RoundEnded.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Patch/Round/RoundEnded.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Patch/Round/RoundRestarting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Patch/Round/RoundRestarting.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Patch/Round/RoundStarted.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Patch/Round/RoundStarted.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Patch/Tesla/InteractingTesla.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Patch/Tesla/InteractingTesla.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibExample/Event/PlayerVer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibExample/Event/PlayerVer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibLoader/Config.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibLoader/Config.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibLoader/Loader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibLoader/Loader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibLoader/PurgaLib_Loader/Command/CustomItemGive.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibLoader/PurgaLib_Loader/Command/CustomItemGive.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibLoader/PurgaLib_Loader/Command/CustomRoleGive.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibLoader/PurgaLib_Loader/Command/CustomRoleGive.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibLoader/PurgaLib_Loader/Command/CustomRoleRemove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibLoader/PurgaLib_Loader/Command/CustomRoleRemove.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibLoader/PurgaLib_Loader/LoaderEvent/PurgaLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibLoader/PurgaLib_Loader/LoaderEvent/PurgaLoader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/Assembly-CSharp-firstpass.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/Assembly-CSharp.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/BouncyCastle.Cryptography.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/Caress.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/CommandSystem.Core.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/DnsClient.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/Facepunch.Steamworks.Win64.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/LabApi.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/LabApi.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/Microsoft.Bcl.AsyncInterfaces.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/Microsoft.Extensions.Configuration.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/Microsoft.Extensions.Configuration.FileExtensions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/Microsoft.Extensions.Configuration.Json.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/Microsoft.Extensions.Configuration.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/Microsoft.Extensions.FileProviders.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/Microsoft.Extensions.FileProviders.Physical.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/Microsoft.Extensions.FileSystemGlobbing.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/Microsoft.Extensions.Primitives.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/Mirror.Components.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/Mirror.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/Mono.Security.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/NorthwoodLib.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/PluginAPI.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/Pooling.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/PurgaLibFramework.dll.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/PurgaLibFramework.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/System.Buffers.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/System.ComponentModel.Composition.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/System.Configuration.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/System.Data.DataSetExtensions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/System.Drawing.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/System.EnterpriseServices.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/System.IO.Compression.FileSystem.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/System.IO.Pipelines.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/System.Memory.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/System.Numerics.Vectors.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/System.Runtime.CompilerServices.Unsafe.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/System.Runtime.Serialization.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/System.Security.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/System.ServiceModel.Internals.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/System.Text.Encodings.Web.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/System.Text.Json.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/System.Threading.Tasks.Extensions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/System.Transactions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/System.Xml.Linq.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/Unity.Burst.Unsafe.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/Unity.Burst.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/Unity.Mathematics.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/Unity.ProBuilder.Csg.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/Unity.ProBuilder.KdTree.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/Unity.ProBuilder.Poly2Tri.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/Unity.ProBuilder.Stl.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/Unity.ProBuilder.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/Unity.RenderPipelines.Core.Runtime.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/Unity.RenderPipelines.Core.ShaderLibrary.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/Unity.RenderPipelines.HighDefinition.Config.Runtime.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/Unity.RenderPipelines.HighDefinition.Runtime.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/Unity.TextMeshPro.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/Unity.Timeline.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/Unity.VisualEffectGraph.Runtime.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.AIModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.ARModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.AccessibilityModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.AndroidJNIModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.AnimationModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.AssetBundleModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.AudioModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.ClothModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.ClusterInputModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.ClusterRendererModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.CoreModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.CrashReportingModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.DSPGraphModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.DirectorModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.GIModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.GameCenterModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.GridModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.HotReloadModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.IMGUIModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.ImageConversionModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.InputLegacyModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.InputModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.JSONSerializeModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.LocalizationModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.NVIDIAModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.ParticleSystemModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.PerformanceReportingModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.Physics2DModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.PhysicsModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.ProfilerModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.ScreenCaptureModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.SharedInternalsModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.SpriteMaskModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.SpriteShapeModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.StreamingModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.SubstanceModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.SubsystemsModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.TLSModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.TerrainModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.TerrainPhysicsModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.TextCoreFontEngineModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.TextCoreTextEngineModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.TextRenderingModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.TilemapModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.UI.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.UIElementsModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.UIElementsNativeModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.UIModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.UNETModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.UmbraModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.UnityAnalyticsCommonModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.UnityAnalyticsModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.UnityConnectModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.UnityCurlModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.UnityTestProtocolModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.UnityWebRequestAssetBundleModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.UnityWebRequestAudioModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.UnityWebRequestModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.UnityWebRequestTextureModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.UnityWebRequestWWWModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.VFXModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.VRModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.VehiclesModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.VideoModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.VirtualTexturingModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.WindModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.XRModule.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/UnityEngine.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/YamlDotNet.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/YamlDotNet.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/netstandard.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/bin/Release/zxing.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/obj/Debug/PurgaLibFramework.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/obj/Debug/PurgaLibFramework.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/obj/Debug/PurgaLibFramework.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/obj/Debug/PurgaLibFramework.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/obj/PurgaLibFramework.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/obj/PurgaLibFramework.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/obj/PurgaLibFramework.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/obj/PurgaLibFramework.csproj.nuget.g.props" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PurgaLibFramework/obj/Release/PurgaLibFramework.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/obj/Release/PurgaLibFramework.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PurgaLibFramework/obj/Release/PurgaLibFramework.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/obj/Release/PurgaLibFramework.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/obj/Release/PurgaLibFramework.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/obj/Release/PurgaLibFramework.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/obj/Release/PurgaLibFramework.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/obj/Release/PurgaLibFramework.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/obj/Release/PurgaLibFramework.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/obj/Release/PurgaLibFramework.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurgaLibFramework/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PurgaLibFramework/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PurgaLibFramework/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/PurgaLibFramework/obj/rider.project.restore.info" afterDir="false" />
     </list>
@@ -224,7 +73,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="48" />
+    <option name="cachedIndexableFilesCount" value="111" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -249,11 +98,15 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/667ffef506a14bd58dec80691c21215840b000/08/7aa152f8/PlayerStats.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/667ffef506a14bd58dec80691c21215840b000/9a/9f2675d8/ReferenceHub.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibAPI/Version.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibCredit/CreditTagsHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibCredit/Enums/CreditRank.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibCredit/Features/DataBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibCredit/Features/Formatter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Attribute/Patcher.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibEvent/Patch/Player/VerifiedPatch.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibLoader/PurgaLib_Loader/GithHubAPI/API.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PurgaLibFramework/PurgaLibFramework/PurgaLib/PurgaLibLoader/PurgaLib_Loader/LoaderEvent/AutoUpdater.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PurgaLibFramework/obj/PurgaLibFramework.csproj.nuget.dgspec.json" root0="FORCE_HIGHLIGHTING" />
@@ -297,7 +150,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.reader.mode&quot;,
     &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -378,7 +231,9 @@
       <workItem from="1768583898085" duration="15874000" />
       <workItem from="1768639341913" duration="776000" />
       <workItem from="1768650185646" duration="16385000" />
-      <workItem from="1768673918921" duration="2241000" />
+      <workItem from="1768673918921" duration="6509000" />
+      <workItem from="1768737406726" duration="9991000" />
+      <workItem from="1768756917103" duration="5606000" />
     </task>
     <task id="LOCAL-00001" summary="Added nuspec for the project.">
       <option name="closed" value="true" />
@@ -580,7 +435,15 @@
       <option name="project" value="LOCAL" />
       <updated>1768490220012</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="For Version 0.1.8 Added 0Harmony and now LabAPI only need for Loader to be called">
+      <option name="closed" value="true" />
+      <created>1768676218845</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1768676218845</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -604,7 +467,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Added nuspec for the project." />
     <MESSAGE value="Added nuspec and will be validated." />
     <MESSAGE value="Updated The icon of the nuget package" />
     <MESSAGE value="Resolved bugs for Events, added a better a user-friendly API. Added version 0.0.4 on Nuget." />
@@ -629,7 +491,8 @@
     <MESSAGE value="Player.Get can now be on ICommandSender" />
     <MESSAGE value="Resolved Bugs" />
     <MESSAGE value="Changed Logo for version 1.7.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed Logo for version 1.7.0" />
+    <MESSAGE value="For Version 0.1.8 Added 0Harmony and now LabAPI only need for Loader to be called" />
+    <option name="LAST_COMMIT_MESSAGE" value="For Version 0.1.8 Added 0Harmony and now LabAPI only need for Loader to be called" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

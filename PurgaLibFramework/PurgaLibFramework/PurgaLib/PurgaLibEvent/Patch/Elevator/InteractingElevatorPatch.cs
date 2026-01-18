@@ -8,10 +8,11 @@ using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Events.Handler;
 
 namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Patch.Elevator;
 
-[PurgaLibEventPatcher(typeof(ElevatorHandler), nameof(ElevatorHandler.OnInteracting))]
+[EventPatch(typeof(ElevatorHandler), nameof(ElevatorHandler.OnInteracting))]
 [HarmonyPatch(typeof(ElevatorDoor), nameof(ElevatorDoor.ServerInteract), typeof(ReferenceHub), typeof(byte))]
 public static class InteractingElevatorPatch
 {
+    [HarmonyPrefix]
      private static void Prefix(ElevatorDoor __instance, ReferenceHub hub, byte colliderId)
     {
         try

@@ -2,7 +2,6 @@ C:\Users\ciste\RiderProjects\PurgaLibFramework\PurgaLibFramework\bin\Release\Pur
 C:\Users\ciste\RiderProjects\PurgaLibFramework\PurgaLibFramework\bin\Release\PurgaLibFramework.dll
 C:\Users\ciste\RiderProjects\PurgaLibFramework\PurgaLibFramework\bin\Release\PurgaLibFramework.pdb
 C:\Users\ciste\RiderProjects\PurgaLibFramework\PurgaLibFramework\bin\Release\Assembly-CSharp-firstpass.dll
-C:\Users\ciste\RiderProjects\PurgaLibFramework\PurgaLibFramework\bin\Release\Assembly-CSharp.dll
 C:\Users\ciste\RiderProjects\PurgaLibFramework\PurgaLibFramework\bin\Release\BouncyCastle.Cryptography.dll
 C:\Users\ciste\RiderProjects\PurgaLibFramework\PurgaLibFramework\bin\Release\Caress.dll
 C:\Users\ciste\RiderProjects\PurgaLibFramework\PurgaLibFramework\bin\Release\CommandSystem.Core.dll
@@ -138,3 +137,6 @@ C:\Users\ciste\RiderProjects\PurgaLibFramework\PurgaLibFramework\bin\Release\Sys
 C:\Users\ciste\RiderProjects\PurgaLibFramework\PurgaLibFramework\bin\Release\System.Text.Encodings.Web.dll
 C:\Users\ciste\RiderProjects\PurgaLibFramework\PurgaLibFramework\bin\Release\System.Text.Json.dll
 C:\Users\ciste\RiderProjects\PurgaLibFramework\PurgaLibFramework\bin\Release\System.Threading.Tasks.Extensions.dll
+C:\Users\ciste\RiderProjects\PurgaLibFramework\PurgaLibFramework\bin\Release\0Harmony.dll
+C:\Users\ciste\RiderProjects\PurgaLibFramework\PurgaLibFramework\bin\Release\AssemblyPublicizer.dll
+C:\Users\ciste\RiderProjects\PurgaLibFramework\PurgaLibFramework\bin\Release\Assembly-CSharp-publicized.dll

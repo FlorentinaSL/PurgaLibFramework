@@ -8,10 +8,11 @@ using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Events.Handler;
 
 namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Patch.Door;
 
-[PurgaLibEventPatcher(typeof(DoorHandler), nameof(DoorHandler.OnInteracting))]
+[EventPatch(typeof(DoorHandler), nameof(DoorHandler.OnInteracting))]
 [HarmonyPatch(typeof(DoorVariant), nameof(DoorVariant.ServerInteract), typeof(ReferenceHub), typeof(byte))]
 public static class InteractingDoorPatch
 {
+    [HarmonyPrefix]
     private static void Prefix(DoorVariant __instance, ReferenceHub hub, byte colliderId)
     {
         try

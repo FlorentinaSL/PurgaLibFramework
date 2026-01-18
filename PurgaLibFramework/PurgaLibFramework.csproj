@@ -36,13 +36,13 @@
     </PropertyGroup>
     <ItemGroup>
         <Reference Include="0Harmony">
-          <HintPath>..\..\..\Downloads\0Harmony.dll</HintPath>
+          <HintPath>..\..\..\Desktop\b\0Harmony.dll</HintPath>
         </Reference>
         <Reference Include="Assembly-CSharp">
-          <HintPath>..\..\..\Downloads\cu\Assembly-CSharp.dll</HintPath>
+          <HintPath>..\..\..\Desktop\b\Assembly-CSharp-publicized.dll</HintPath>
         </Reference>
         <Reference Include="Assembly-CSharp-firstpass">
-          <HintPath>..\..\..\Downloads\cu\Assembly-CSharp-firstpass.dll</HintPath>
+          <HintPath>..\..\..\Desktop\b\Assembly-CSharp-firstpass.dll</HintPath>
         </Reference>
         <Reference Include="BouncyCastle.Cryptography">
           <HintPath>..\..\Elevium Pl\Elevium Pl\References\BouncyCastle.Cryptography.dll</HintPath>
@@ -62,6 +62,7 @@
         <Reference Include="LabApi, Version=1.1.4.0, Culture=neutral, processorArchitecture=Amd64">
           <HintPath>..\packages\Northwood.LabAPI.1.1.4\lib\net48\LabApi.dll</HintPath>
         </Reference>
+        <Reference Include="Microsoft.CSharp" />
         <Reference Include="Mirror">
           <HintPath>..\..\Elevium Pl\Elevium Pl\References\Mirror.dll</HintPath>
         </Reference>
@@ -78,7 +79,7 @@
           <HintPath>..\..\Elevium Pl\Elevium Pl\References\netstandard.dll</HintPath>
         </Reference>
         <Reference Include="NorthwoodLib">
-          <HintPath>..\..\Elevium Pl\Elevium Pl\References\NorthwoodLib.dll</HintPath>
+          <HintPath>..\..\..\Desktop\b\NorthwoodLib.dll</HintPath>
         </Reference>
         <Reference Include="PluginAPI">
           <HintPath>..\..\Elevium Pl\Elevium Pl\References\PluginAPI.dll</HintPath>
@@ -446,10 +447,9 @@
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibCustomItems\Handlers\CustomItemHandler.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibCustomRoles\CustomRole.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibCustomRoles\Handlers\CustomRoleHandler.cs" />
-        <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibEvent\Attribute\Attribute.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibEvent\Attribute\Event{T}.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibEvent\Attribute\Interfaces\IEvent.cs" />
-        <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibEvent\Attribute\PatchALL.cs" />
+        <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibEvent\Attribute\Patcher.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibEvent\Events\EventArgs\Map\OnDoorInteracting.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibEvent\Events\EventArgs\Map\OnElevatorUsing.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibEvent\Events\EventArgs\Map\OnInteractingTesla.cs" />
@@ -487,6 +487,7 @@
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibEvent\Patch\Player\LeftPatch.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibEvent\Patch\Player\PickUpPatch.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibEvent\Patch\Player\UpgradingPatch.cs" />
+        <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibEvent\Patch\Player\VerifiedPatch.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibEvent\Patch\Round\RoundEnded.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibEvent\Patch\Round\RoundRestarting.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibEvent\Patch\Round\RoundStarted.cs" />
@@ -532,6 +533,10 @@
       <None Include="packages.config" />
     </ItemGroup>
     <ItemGroup>
+      <PackageReference Include="AssemblyPublicizer" Version="1.0.2">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
       <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="10.0.1" />
     </ItemGroup>
     <ItemGroup>

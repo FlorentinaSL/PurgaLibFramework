@@ -1,29 +1,26 @@
-﻿using PlayerRoles;
+﻿using System;
+using PlayerRoles;
+using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibAPI.Features;
 
-namespace PurgaLibEvents.PurgaLibEvent.Events.EventArgs.Player
+public class PlayerChangedRoleEventArgs : EventArgs
 {
-    public class PlayerChangedRoleEventArgs : System.EventArgs
-    {
-        public PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibAPI.Features.Player Player { get; }
-        public ReferenceHub ReferenceHub => Player?.ReferenceHub;
-        public PlayerRoleBase NewRole { get; }
-        public RoleTypeId OldRole { get; }
-        public RoleChangeReason ChangeReason { get; }
-        public RoleSpawnFlags SpawnFlags { get; }
-        public bool IsAllowed { get; set; } = true;
+    public Player Player { get; }
+    public RoleTypeId OldRole { get; }
+    public RoleTypeId NewRole { get; }
+    public RoleChangeReason Reason { get; }
+    public RoleSpawnFlags SpawnFlags { get; }
 
-        public PlayerChangedRoleEventArgs(
-            PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibAPI.Features.Player player,
-            RoleTypeId oldRole,
-            PlayerRoleBase newRole,
-            RoleChangeReason changeReason,
-            RoleSpawnFlags spawnFlags)
-        {
-            Player = player;
-            OldRole = oldRole;
-            NewRole = newRole;
-            ChangeReason = changeReason;
-            SpawnFlags = spawnFlags;
-        }
+    public PlayerChangedRoleEventArgs(
+        Player player,
+        RoleTypeId oldRole,
+        RoleTypeId newRole,
+        RoleChangeReason reason,
+        RoleSpawnFlags spawnFlags)
+    {
+        Player = player;
+        OldRole = oldRole;
+        NewRole = newRole;
+        Reason = reason;
+        SpawnFlags = spawnFlags;
     }
 }

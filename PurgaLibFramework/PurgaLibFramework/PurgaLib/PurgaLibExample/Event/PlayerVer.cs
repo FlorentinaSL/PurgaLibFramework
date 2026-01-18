@@ -1,5 +1,5 @@
-﻿using PurgaLibEvents.PurgaLibEvent.Events.EventArgs.Player;
-using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibAPI.Features.Server;
+﻿using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibAPI.Features.Server;
+using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Events.EventArgs.Player;
 using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Events.Handler;
 
 namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibExample.Event;

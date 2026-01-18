@@ -4,14 +4,16 @@ using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Attribute;
 using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Events.EventArgs.Round;
 using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Events.Handler;
 
-namespace PurgaLibEvents.PurgaLibEvent.Patch.Round;
-
-[PurgaLibEventPatcher(typeof(RoundHandler), nameof(RoundHandler.OnEnded))]
-[HarmonyPatch(typeof(RoundSummary), nameof(RoundSummary.RoundEnded))]
-public static class RoundEndedPatch
+namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Patch.Round
 {
-    private static void Prefix(Team team)
+    [EventPatch(typeof(RoundHandler), nameof(RoundHandler.OnEnded))]
+    [HarmonyPatch(typeof(RoundSummary), nameof(RoundSummary.IsRoundEnded), MethodType.Setter)]
+    public static class RoundEndedPatch
     {
-        RoundHandler.OnEnded(new RoundEndedEventArgs(team.ToString()));
+        [HarmonyPrefix]
+        private static void Prefix(Team winner)
+        {
+            RoundHandler.OnEnded(new RoundEndedEventArgs(winner.ToString()));
+        }
     }
 }

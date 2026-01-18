@@ -1,6 +1,5 @@
 ﻿using System;
 using HarmonyLib;
-using PurgaLibEvents.PurgaLibEvent.Events.EventArgs.Player;
 using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibAPI.Features.Server;
 using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Attribute;
 using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Events.EventArgs.Player;
@@ -9,10 +8,11 @@ using UnityEngine;
 
 namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Patch.Player;
 
-[PurgaLibEventPatcher(typeof(PlayerHandler), nameof(PlayerHandler.OnKicked))]
+[EventPatch(typeof(PlayerHandler), nameof(PlayerHandler.OnKicked))]
 [HarmonyPatch(typeof(ServerConsole), nameof(ServerConsole.Disconnect), typeof(GameObject), typeof(string))]
 public static class KickedPatch
 {
+    [HarmonyPostfix]
     private static void Postfix(GameObject playerObject, string reason)
     {
         try

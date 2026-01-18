@@ -29,7 +29,8 @@ namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibAPI.Features
 
         public override bool IsAlive =>
             ReferenceHub.IsAlive();
-
+        
+        #pragma warning disable CS0108
         public Vector3 Position
         {
             get => ReferenceHub.transform.position;

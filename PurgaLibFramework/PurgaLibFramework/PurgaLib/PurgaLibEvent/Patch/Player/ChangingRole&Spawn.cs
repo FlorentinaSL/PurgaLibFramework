@@ -1,53 +1,71 @@
 ﻿using System;
 using HarmonyLib;
 using PlayerRoles;
-using PurgaLibEvents.PurgaLibEvent.Events.EventArgs.Player;
 using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibAPI.Features.Server;
 using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Attribute;
+using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Events.EventArgs.Player;
 using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Events.Handler;
 
-namespace PurgaLibEvents.PurgaLibEvent.Patch.Player;
-
-[PurgaLibEventPatcher(typeof(PlayerHandler), nameof(PlayerHandler.OnChangingRole))]
-[PurgaLibEventPatcher(typeof(PlayerHandler), nameof(PlayerHandler.OnChangedRole))]
-[PurgaLibEventPatcher(typeof(PlayerHandler), nameof(PlayerHandler.OnSpawned))]
-[PurgaLibEventPatcher(typeof(PlayerHandler), nameof(PlayerHandler.OnSpawning))]
-[HarmonyPatch(typeof(PlayerRoleManager), nameof(PlayerRoleManager.InitializeNewRole))]
-public static class ChangingRoleSpawnPatch
+namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Patch.Player
 {
-    private static void Prefix(PlayerRoleManager __instance, PlayerRoleBase oldRole ,RoleTypeId newRole)
+    [EventPatch(typeof(PlayerHandler), nameof(PlayerHandler.OnChangedRole))]
+    [EventPatch(typeof(PlayerHandler), nameof(PlayerHandler.OnChangingRole))]
+    [HarmonyPatch(typeof(PlayerRoleManager), nameof(PlayerRoleManager.InitializeNewRole))]
+    public static class ChangingRoleSpawnPatch
     {
-        try
+        [HarmonyPrefix]
+        private static void Prefix(
+            PlayerRoleManager __instance,
+            RoleTypeId targetId,
+            out RoleTypeId __state)
         {
-            var hub = __instance.Hub;
-            if (hub == null) return;
+            __state = __instance.CurrentRole != null ? __instance.CurrentRole.RoleTypeId : RoleTypeId.None;
 
-            var player = new PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibAPI.Features.Player(hub);
-            
-            PlayerHandler.OnSpawning(new PlayerSpawningEventArgs(player));
-            PlayerHandler.OnChangingRole(new PlayerChangingRoleEventArgs(player, oldRole, newRole));
-        }
-        catch (Exception e)
-        {
-            Log.Error($"Error in ChangingRoleChangedRolePatch Prefix: {e}");
-        }
-    }
+            try
+            {
+                var hub = __instance.Hub;
+                if (hub == null) return;
 
-    private static void Postfix(PlayerRoleManager __instance, RoleTypeId oldRole ,PlayerRoleBase newRole)
-    {
-        try
-        {
-            var hub = __instance.Hub;
-            if (hub == null) return;
+                var player = new PurgaLibAPI.Features.Player(hub);
 
-            var player = new PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibAPI.Features.Player(hub);
-            
-            PlayerHandler.OnSpawned(new PlayerSpawnedEventArgs(player));
-            PlayerHandler.OnChangedRole(new PlayerChangedRoleEventArgs(player, oldRole, newRole, RoleChangeReason.None, RoleSpawnFlags.None));
+                PlayerHandler.OnSpawning(new PlayerSpawningEventArgs(player));
+                PlayerHandler.OnChangingRole(new PlayerChangingRoleEventArgs(player, __state, targetId));
+            }
+            catch (Exception e)
+            {
+                Log.Error($"Error in ChangingRoleSpawnPatch Prefix: {e}");
+            }
         }
-        catch (Exception e)
+        
+        [HarmonyPostfix]
+        private static void Postfix(
+            PlayerRoleManager __instance,
+            RoleTypeId targetId,
+            RoleChangeReason reason,
+            RoleSpawnFlags spawnFlags,
+            Mirror.NetworkReader data,
+            RoleTypeId __state)
         {
-            Log.Error($"Error in ChangingRoleChangedRolePatch Postfix: {e}");
+            try
+            {
+                var hub = __instance.Hub;
+                if (hub == null) return;
+
+                var player = new PurgaLibAPI.Features.Player(hub);
+
+                PlayerHandler.OnSpawned(new PlayerSpawnedEventArgs(player));
+                PlayerHandler.OnChangedRole(new PlayerChangedRoleEventArgs(
+                    player,
+                    __state,
+                    targetId,
+                    reason,
+                    spawnFlags
+                ));
+            }
+            catch (Exception e)
+            {
+                Log.Error($"Error in ChangingRoleSpawnPatch Postfix: {e}");
+            }
         }
     }
 }

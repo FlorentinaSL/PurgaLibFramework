@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using PlayerRoles; 
-using PurgaLibEvents.PurgaLibEvent.Attribute;
+using PlayerRoles;
 using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibAPI.Features;
+using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Attribute;
 
 namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibCustomRoles.Handlers
 {

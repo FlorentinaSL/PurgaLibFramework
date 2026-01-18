@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using InventorySystem;
 using InventorySystem.Items;
-using PurgaLibEvents.PurgaLibEvent.Attribute;
 using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibAPI.Features;
 using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibCustomItems.EventsArgs;
+using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Attribute;
 
 namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibCustomItems.Handlers
 {

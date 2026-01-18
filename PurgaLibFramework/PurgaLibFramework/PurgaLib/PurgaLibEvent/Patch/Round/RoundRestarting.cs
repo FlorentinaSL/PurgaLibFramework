@@ -6,10 +6,11 @@ using RoundRestarting;
 
 namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Patch.Round;
 
-[PurgaLibEventPatcher(typeof(RoundHandler), nameof(RoundHandler.OnRestarting))]
+[EventPatch(typeof(RoundHandler), nameof(RoundHandler.OnRestarting))]
 [HarmonyPatch(typeof(RoundRestart), nameof(RoundRestart.IsRoundRestarting), MethodType.Setter)]
 public static class RoundRestarting
 {
+    [HarmonyPrefix]
     private static void Prefix(bool value)
     {
         if (!value || value == RoundRestart.IsRoundRestarting)

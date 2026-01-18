@@ -8,10 +8,11 @@ using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Events.Handler;
 
 namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Patch.Player;
 
-[PurgaLibEventPatcher(typeof(PlayerHandler), nameof(PlayerHandler.OnItemPickedUp))]
+[EventPatch(typeof(PlayerHandler), nameof(PlayerHandler.OnItemPickedUp))]
 [HarmonyPatch(typeof(ItemSearchCompletor), nameof(ItemSearchCompletor.Complete))]
 public static class PickUpPatch
 {
+    [HarmonyPostfix]
     private static void Postfix(ItemSearchCompletor __instance)
     {
         try
