@@ -11,7 +11,5 @@ Status **RELEASE**
 Usage
 Add `PurgaLibFramework.dll` to LabAPI/plugins/Global and reference it in your plugin project.
 
-For version 1.8.0 ChangeLogs:
-- Now events depend on Harmony
-- Full API now works on itself and not on LabAPI
-- Custom Items & Roles now works better
+For version 1.9.0 ChangeLogs:
+- Fixed events on Harmony
