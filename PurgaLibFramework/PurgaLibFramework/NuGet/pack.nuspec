@@ -31,7 +31,6 @@
 
     <files>
         <file src="C:\Users\ciste\RiderProjects\PurgaLibFramework\PurgaLibFramework\bin\Release\PurgaLibFramework.dll" target="lib\net48" />
-        <file src="..\..\bin\Debug\LabApi.dll" target="lib\net48" />
         <file src="..\..\bin\Debug\NorthwoodLib.dll" target="lib\net48" />
         <file src="..\..\bin\Debug\Assembly-CSharp.dll" target="lib\net48" />
         <file src="..\..\bin\Debug\CommandSystem.Core.dll" target="lib\net48" />

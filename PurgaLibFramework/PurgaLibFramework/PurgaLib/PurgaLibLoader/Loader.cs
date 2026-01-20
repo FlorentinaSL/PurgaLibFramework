@@ -26,7 +26,8 @@ namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibLoader
             Instance = this;
             PurgaUpdater.Initialize();
             PurgaUpdater.Instance.CheckUpdate();
-
+            Harmony.DEBUG = true;
+            
             Patch();
             PlayerHandler.Joined += PlayerHandler.OnJoined;
             PlayerHandler.Left += PlayerHandler.OnLeft;
@@ -96,7 +97,7 @@ Welcome to:
             
             DoorHandler.Interacting += DoorHandler.OnInteracting;
             ElevatorHandler.Interacting += ElevatorHandler.OnInteracting;
-            //TeslaHandler.InteractingTesla += TeslaHandler.OnInteractingTesla;
+            TeslaHandler.InteractingTesla += TeslaHandler.OnInteractingTesla;
             
             Instance = null;
             Log.SendRaw("Bye bye from PurgaLib", ConsoleColor.Cyan);
@@ -108,7 +109,6 @@ Welcome to:
             try
             {
                 Patcher = new Patcher();
-                
                 Patcher.PatchAll(!Config.UseDynamicPatch, out int failedPatches);
                 if (failedPatches == 0)
                 {

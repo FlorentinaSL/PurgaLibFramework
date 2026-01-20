@@ -11,6 +11,7 @@ namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Patch.Playe
     [HarmonyPatch(typeof(ReferenceHub), nameof(ReferenceHub.Start))]
     internal static class JoinedPatch
     {
+        [HarmonyPostfix]
         private static void Postfix(ReferenceHub __instance)
         {
             try

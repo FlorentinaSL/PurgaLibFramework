@@ -12,14 +12,13 @@ namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Patch.Playe
     [HarmonyPatch(typeof(PlayerAuthenticationManager), nameof(PlayerAuthenticationManager.FinalizeAuthentication))]
     public static class VerifiedPatch
     {
-        internal static void PlayerVerified(ReferenceHub hub)
+        [HarmonyPostfix]
+        private static void PlayerVerified(ReferenceHub hub)
         {
             try
             {
-                // Add the player to the verified list
                 VerifiedPlayersCache.Verified.Add(hub._playerId.ToString());
-
-                // Trigger the OnVerified event
+                
                 var player = new PurgaLibAPI.Features.Player(hub);
                 PlayerHandler.OnVerified(new PlayerVerifiedEventArgs(player));
 

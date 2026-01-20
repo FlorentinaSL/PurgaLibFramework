@@ -7,89 +7,110 @@ using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibAPI.Features.Server;
 
 namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Attribute
 {
-    /// <summary>
-    /// Harmony patcher per PurgaLib (stile Exiled).
-    /// Patcha tutte le classi con HarmonyPatch o EventPatchAttribute automaticamente.
-    /// </summary>
     public class Patcher
     {
         private static int patchesCounter;
-
         public Harmony Harmony { get; }
 
-        /// <summary>
-        /// Tutti i tipi ancora non patchati di PurgaLib
-        /// </summary>
         public static HashSet<Type> UnpatchedTypes { get; private set; } = GetAllPatchTypes();
-
-        /// <summary>
-        /// Metodi per cui il patch automatico è disabilitato
-        /// </summary>
         public static HashSet<MethodBase> DisabledPatches { get; } = new();
 
-        public Patcher()
+        internal Patcher()
         {
             Harmony = new Harmony($"purgalib.events.{++patchesCounter}");
         }
-
-        // ------------------- PATCH ALL (stile Exiled) -------------------
+        
         public void PatchAll(bool includeEvents, out int failedPatches)
         {
             failedPatches = 0;
 
-            foreach (var assembly in AppDomain.CurrentDomain.GetAssemblies())
+            Log.Info("[Patcher] Types to patch:");
+            foreach (var t in UnpatchedTypes)
+                Log.Info($"  - {t.FullName}");
+
+            IEnumerable<Type> toPatch = includeEvents
+                ? UnpatchedTypes
+                : UnpatchedTypes.Where(t => !t.GetCustomAttributes<EventPatchAttribute>().Any());
+
+            foreach (Type type in toPatch.ToList())
             {
                 try
                 {
-                    // Patcha tutte le classi Harmony nell'assembly
-                    Harmony.PatchAll(assembly);
+                    Log.Info($"[Patcher] Patching class: {type.FullName}");
+                    
+                    var methodsBefore = type.GetMethods(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Static);
+                    foreach (var m in methodsBefore)
+                        Log.Info($"[Before Patch] {type.FullName}.{m.Name}");
 
-                    // Aggiorna UnpatchedTypes
-                    UnpatchedTypes.RemoveWhere(t => t.Assembly == assembly);
+                    var patchedMethods = Harmony.CreateClassProcessor(type).Patch();
+                    
+                    if (patchedMethods != null)
+                    {
+                        foreach (var m in patchedMethods)
+                            Log.Info($"[Patched] {m.DeclaringType?.FullName}.{m.Name}");
+                    }
+                    else
+                    {
+                        Log.Warn($"[Patcher] No methods patched in {type.FullName}");
+                    }
 
-                    Log.Info($"[Patcher] Patched assembly: {assembly.FullName}");
+                    // Controlla disabled patches
+                    if (patchedMethods != null && DisabledPatches.Any(x => patchedMethods.Contains(x)))
+                        ReloadDisabledPatches();
+
+                    UnpatchedTypes.Remove(type);
+                }
+                catch (HarmonyException ex)
+                {
+                    Log.Error($"[Patcher] Failed to patch {type.FullName}\n{ex}");
+                    failedPatches++;
                 }
                 catch (Exception ex)
                 {
-                    Log.Error($"[Patcher] Failed to patch assembly {assembly.FullName}: {ex}");
+                    Log.Error($"[Patcher] Unexpected error patching {type.FullName}\n{ex}");
                     failedPatches++;
                 }
             }
 
-            if (!includeEvents)
-            {
-                // Rimuovi tipi con EventPatchAttribute se non vogliamo includere eventi
-                UnpatchedTypes.RemoveWhere(t => t.GetCustomAttributes<EventPatchAttribute>().Any());
-            }
+            Log.Info("[Patcher] PatchAll complete.");
         }
-
-        // ------------------- PATCH BY EVENT -------------------
-        public void PatchByEvent<TEvent>()
+        
+        public void PatchByEvent(IEvent @event)
         {
             var types = UnpatchedTypes
                 .Where(t => t.GetCustomAttributes<EventPatchAttribute>()
-                             .Any(a => (a as EventPatchAttribute)?.TypeId == typeof(TEvent)))
+                    .Any(a => a.Event == @event))
                 .ToList();
 
-            foreach (var type in types)
+            foreach (Type type in types)
             {
                 try
                 {
-                    Harmony.CreateClassProcessor(type).Patch();
+                    Log.Info($"[Patcher] Patching {type.FullName} for event {@event.GetType().Name}");
+
+                    var patchedMethods = Harmony.CreateClassProcessor(type).Patch();
                     UnpatchedTypes.Remove(type);
-                    Log.Info($"[Patcher] Patched {type.FullName} for event {typeof(TEvent).Name}");
+
+                    if (patchedMethods != null)
+                    {
+                        foreach (var m in patchedMethods)
+                            Log.Info($"[Patched] {m.DeclaringType?.FullName}.{m.Name}");
+                    }
+                    else
+                    {
+                        Log.Warn($"[Patcher] No methods patched in {type.FullName}");
+                    }
                 }
                 catch (Exception ex)
                 {
-                    Log.Error($"[Patcher] Failed to patch {type.FullName} for event {typeof(TEvent).Name}: {ex}");
+                    Log.Error($"[Patcher] Failed to patch {type.FullName}\n{ex}");
                 }
             }
         }
-
-        // ------------------- RELOAD DISABLED -------------------
+        
         public void ReloadDisabledPatches()
         {
-            foreach (var method in DisabledPatches)
+            foreach (MethodBase method in DisabledPatches)
             {
                 try
                 {
@@ -98,69 +119,65 @@ namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibEvent.Attribute
                 }
                 catch (Exception ex)
                 {
-                    Log.Error($"[Patcher] Failed to unpatch {method.Name}: {ex}");
+                    Log.Error($"[Patcher] Failed to unpatch {method.DeclaringType?.Name}.{method.Name}\n{ex}");
                 }
             }
         }
-
-        // ------------------- UNPATCH ALL -------------------
+        
         public void UnpatchAll()
         {
-            Log.Info("[Patcher] Unpatching all...");
+            Log.Info("[Patcher] Unpatching all patches...");
             Harmony.UnpatchAll(Harmony.Id);
             UnpatchedTypes = GetAllPatchTypes();
-            Log.Info("[Patcher] All patches removed!");
+            Log.Info("[Patcher] Done.");
         }
-
-        // ------------------- HELPERS -------------------
+        
         private static HashSet<Type> GetAllPatchTypes()
         {
-            var types = new HashSet<Type>();
+            var types = Assembly.GetExecutingAssembly()
+                .GetTypes()
+                .Where(t =>
+                    t.GetCustomAttributes<HarmonyPatch>().Any() ||
+                    t.GetCustomAttributes<EventPatchAttribute>().Any())
+                .ToHashSet();
 
-            foreach (var assembly in AppDomain.CurrentDomain.GetAssemblies())
-            {
-                Type[] assemblyTypes;
-                try { assemblyTypes = assembly.GetTypes(); }
-                catch (ReflectionTypeLoadException ex) { assemblyTypes = ex.Types.Where(t => t != null).ToArray(); }
-
-                foreach (var type in assemblyTypes)
-                {
-                    if (type == null || string.IsNullOrEmpty(type.Namespace))
-                        continue;
-
-                    if (!type.Namespace.StartsWith("PurgaLibFramework"))
-                        continue;
-                    
-                    foreach (var method in type.GetMethods())
-                    {
-                        Console.WriteLine($"Found method: {type.FullName}.{method.Name}");
-                    }
-
-                    if (type.GetCustomAttributes(typeof(HarmonyPatch), true).Any() ||
-                        type.GetCustomAttributes(typeof(EventPatchAttribute), true).Any())
-                    {
-                        types.Add(type);
-                    }
-                }
-
-            }
+            Log.Info($"[Patcher] Found {types.Count} patchable types in assembly.");
 
             return types;
         }
     }
-
+    
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]
-    internal class EventPatchAttribute : System.Attribute
+    internal sealed class EventPatchAttribute : System.Attribute
     {
-        internal Type TypeId { get; }
+        internal Type HandlerType { get; }
         private readonly string eventName;
 
         internal EventPatchAttribute(Type handlerType, string eventName)
         {
-            TypeId = handlerType;
+            HandlerType = handlerType;
             this.eventName = eventName;
         }
 
-        internal IEvent Event => (IEvent)TypeId.GetProperty(eventName)?.GetValue(null);
+        internal IEvent Event
+        {
+            get
+            {
+                var prop = HandlerType.GetProperty(eventName, BindingFlags.Public | BindingFlags.Static);
+                if (prop == null)
+                {
+                    Log.Warn($"EventPatchAttribute: Property '{eventName}' not found in {HandlerType.FullName}");
+                    return null;
+                }
+
+                var value = prop.GetValue(null) as IEvent;
+                if (value == null)
+                {
+                    Log.Warn($"EventPatchAttribute: Property '{eventName}' in {HandlerType.FullName} is not an IEvent");
+                }
+
+                return value;
+            }
+        }
     }
 }

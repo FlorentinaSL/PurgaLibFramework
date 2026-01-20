@@ -59,9 +59,6 @@
         <Reference Include="Facepunch.Steamworks.Win64">
           <HintPath>..\..\Elevium Pl\Elevium Pl\References\Facepunch.Steamworks.Win64.dll</HintPath>
         </Reference>
-        <Reference Include="LabApi, Version=1.1.4.0, Culture=neutral, processorArchitecture=Amd64">
-          <HintPath>..\packages\Northwood.LabAPI.1.1.4\lib\net48\LabApi.dll</HintPath>
-        </Reference>
         <Reference Include="Microsoft.CSharp" />
         <Reference Include="Mirror">
           <HintPath>..\..\Elevium Pl\Elevium Pl\References\Mirror.dll</HintPath>
@@ -511,9 +508,6 @@
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibLoader\PurgaLib_Loader\LoaderEvent\PurgaLoader.cs" />
     </ItemGroup>
     <ItemGroup>
-      <Content Include="bin\Debug\LabApi.dll" />
-      <Content Include="bin\Debug\PluginAPI.dll" />
-      <Content Include="bin\Debug\PurgaLibFramework.dll" />
       <Content Include="bin\Release\PurgaLibFramework.dll" />
       <Content Include="PurgaLibFramework\Copyright.txt" />
       <Content Include="PurgaLibFramework\NuGet\Copyright.txt" />
@@ -538,6 +532,7 @@
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       </PackageReference>
       <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="10.0.1" />
+      <PackageReference Include="Northwood.LabAPI" Version="1.1.5" />
     </ItemGroup>
     <ItemGroup>
       <Folder Include="bin\Release\" />
