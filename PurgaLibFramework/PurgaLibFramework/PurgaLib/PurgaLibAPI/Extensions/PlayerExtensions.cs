@@ -34,10 +34,26 @@ namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibAPI.Extensions
             TeleportTo(player, target, Vector3.zero);
         }
 
+        public static void BadgeText(this Player player, string text)
+        {
+            if (player == null)
+                return;
+
+            player.ReferenceHub.serverRoles.Network_myText = text;
+        }
+
+        public static void BadgeColor(this Player player, string color)
+        {
+            if (player == null)
+                return;
+
+            player.ReferenceHub.serverRoles.Network_myColor = color;
+        }
+
         public static void HealFull(this Player player)
         {
             if (player == null) return;
-            player.Heal(100f - player.Health);
+            player.Heal(player.MaxHealth);
         }
 
         public static void KillSilent(this Player player)
