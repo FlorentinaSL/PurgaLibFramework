@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibAPI.Features.Server
 {
-    public sealed class MapActor : PActor
+    public sealed class Map : PActor
     {
         private static Light[] _allLights;
         private static void InitLights()

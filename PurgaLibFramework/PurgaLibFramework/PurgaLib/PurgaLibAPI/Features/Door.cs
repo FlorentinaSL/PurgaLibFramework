@@ -15,7 +15,7 @@ namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibAPI.Features
         public Door(DoorVariant door)
         {
             _door = door;
-            Type = DoorMapper.GetDoorType(door); // assegna subito il DoorType
+            Type = DoorMapper.GetDoorType(door); 
         }
 
         public DoorVariant Base => _door;

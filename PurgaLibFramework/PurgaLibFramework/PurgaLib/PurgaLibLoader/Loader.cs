@@ -5,6 +5,8 @@ using LabApi.Loader.Features.Plugins;
 using LabApi.Loader.Features.Plugins.Enums;
 using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibAPI.Core;
 using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibAPI.Features.Server;
+using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibCustomItems.Handlers;
+using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibCustomRoles.Handlers;
 using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibLoader.PurgaLib_Loader.LoaderEvent;
 
 namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibLoader
@@ -17,7 +19,7 @@ namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibLoader
         public override string Name { get; } = "PurgaLibLoader";
         public override string Description { get; } = "The loader of PurgaLib";
         public override string Author { get; } = "Florentina";
-        public override Version Version { get; } = new Version(2, 2, 0);
+        public override Version Version { get; } = new Version(2, 3, 0);
         public override Version RequiredApiVersion { get; } = new Version(1, 0, 0, 0);
         public override LoadPriority Priority { get; } = LoadPriority.Lowest;
 
@@ -35,6 +37,8 @@ namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibLoader
 
             _register = new PEventRegister();
             _register.RegisterAll();
+            
+            CustomItemHandler.RegisterNaturalEvent();
             
             Log.SendRaw($"PurgaLibAPI Version {PurgaLibAPI.Version.version}", ConsoleColor.DarkRed);
             Log.SendRaw($"PurgaLib Version: {Version}", ConsoleColor.Red);

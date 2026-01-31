@@ -434,11 +434,13 @@
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibAPI\Features\Elevator.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibAPI\Features\Item.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibAPI\Features\Player.cs" />
+        <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibAPI\Features\Room.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibAPI\Features\Server\Cassie.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibAPI\Features\Server\Log.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibAPI\Features\Server\Map.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibAPI\Features\Server\Round.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibAPI\Features\Server\Server.cs" />
+        <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibAPI\Features\SpawnLocationMapper\LocationMapper.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibAPI\Features\Warhead.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibAPI\Version.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibCredit\CreditTagsHandler.cs" />

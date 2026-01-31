@@ -2,5 +2,6 @@
 
 public static class Version
 {
-    public static string version => "1.2.0";
+    //Added Auto Event and Warhead, Mappers and SpawnLocation
+    public static string version => "1.3.0";
 }

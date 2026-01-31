@@ -21,6 +21,7 @@ namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibAPI.Features
         
         public bool IsPickup => Pickup != null;
         
+        #pragma warning disable
         public ItemPickupBase Pickup { get; }
         
         public Vector3 Position =>
@@ -30,22 +31,15 @@ namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibAPI.Features
 
         #region Constructors
         
-        public Item(ItemBase itemBase)
-        {
-            Base = itemBase;
 
-            if (itemBase.Owner != null)
-            {
-                Owner = new Player(itemBase.Owner);
-            }
+        public Item(ItemType type, Player owner = null)
+        {
+            if (owner == null) return;
+
+            Base = owner.Inventory.ServerAddItem(type, ItemAddReason.Undefined);
+            Owner = owner;
         }
         
-        public Item(ItemPickupBase pickup)
-        {
-            Pickup = pickup;
-            Base = pickup.gameObject.AddComponent<ItemBase>();
-        }
-
         #endregion
 
         #region Type helpers
@@ -72,7 +66,7 @@ namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibAPI.Features
             Owner?.Inventory.ServerRemoveItem(Serial, null);
         }
         
-        public void Drop()
+        public void Drop(Vector3 randomPoint)
         {
             if (Owner == null) return;
             Owner.Inventory.ServerDropItem(Serial);
