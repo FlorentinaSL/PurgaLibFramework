@@ -5,6 +5,7 @@ using CustomPlayerEffects;
 using Hints;
 using InventorySystem;
 using InventorySystem.Items;
+using Mirror;
 using PlayerRoles;
 using PlayerStatsSystem;
 using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibAPI.Core;
@@ -33,14 +34,16 @@ namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibAPI.Features
 
         public override bool IsAlive =>
             ReferenceHub.IsAlive();
-        
+        public bool IsHost => ReferenceHub.isLocalPlayer;
+        public bool IsNpc => !IsHost && ReferenceHub.connectionToClient.GetType() != typeof(NetworkConnectionToClient);
+        public bool IsConnected => ReferenceHub.connectionToClient != null;
         #pragma warning disable CS0108
         public Vector3 Position
         {
             get => ReferenceHub.transform.position;
             set => ReferenceHub.transform.position = value;
         }
-
+        
         public string UserId => ReferenceHub.authManager.UserId;
         public string Nickname => ReferenceHub.nicknameSync.DisplayName;
         public int PlayerId => ReferenceHub.PlayerId;
