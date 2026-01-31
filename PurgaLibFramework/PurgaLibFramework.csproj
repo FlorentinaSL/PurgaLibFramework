@@ -415,9 +415,6 @@
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibAPI\Enums\DoorLockType.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibAPI\Enums\DoorType.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibAPI\Enums\EffectType.cs" />
-        <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibAPI\Enums\FirearmType.cs" />
-        <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibAPI\Enums\ItemCategory.cs" />
-        <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibAPI\Enums\PlayerRole.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibAPI\Enums\SpawnLocationType.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibAPI\Enums\TeamSide.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibAPI\Extensions\DoorExtensions.cs" />
@@ -426,12 +423,15 @@
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibAPI\Extensions\RoleTypeExtensions.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibAPI\Extensions\Vector3Extensions.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibAPI\Features\AutoWhiteList.cs" />
+        <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibAPI\Features\BroadCast.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibAPI\Features\Door.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibAPI\Features\DoorVariantMapper\DoorVariantMapper.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibAPI\Features\Effects\Effect.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibAPI\Features\Effects\EffectMapper.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibAPI\Features\Effects\PlayerEffectHandler.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibAPI\Features\Elevator.cs" />
+        <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibAPI\Features\Hints\CurrentHint.cs" />
+        <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibAPI\Features\Hints\Hint.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibAPI\Features\Item.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibAPI\Features\Player.cs" />
         <Compile Include="PurgaLibFramework\PurgaLib\PurgaLibAPI\Features\Room.cs" />

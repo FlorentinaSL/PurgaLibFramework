@@ -12,6 +12,7 @@ using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibAPI.Core;
 using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibAPI.Core.Interfaces;
 using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibAPI.Enums;
 using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibAPI.Features.Effects;
+using PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibAPI.Features.Hints;
 using RemoteAdmin;
 using UnityEngine;
 
@@ -23,7 +24,10 @@ namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibAPI.Features
 
         public ReferenceHub ReferenceHub { get; }
         public PlayerEffectHandler EffectHandler { get; }
-
+        public PlayerHint CurrentHint { get; internal set; }
+        public bool HasHint => CurrentHint != null;
+        public HintDisplay HintDisplay { get; private set; }
+        public NetworkConnection Connection { get; set; }
         public Player(ReferenceHub gameObject)
         {
             ReferenceHub = ReferenceHub.GetHub(gameObject);
@@ -90,11 +94,61 @@ namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibAPI.Features
         public void Teleport(Vector3 position)
             => ReferenceHub.transform.position = position;
 
-        public void SendBroadcast(string message, ushort duration)
-            => ReferenceHub.BroadcastMessage(message, duration);
+        public void Broadcast(PlayerBroadcast broadcast, bool clearPrevious = false)
+        {
+            if (broadcast == null || !broadcast.Show)
+                return;
 
-        public void SendHint(string message)
-            => ReferenceHub.hints.Show(new TextHint(message));
+            if (clearPrevious)
+                global::Broadcast.Singleton.TargetClearElements(Connection);
+
+            global::Broadcast.Singleton.TargetAddElement(Connection, broadcast.Content, broadcast.Duration, broadcast.Type);
+        }
+        
+        public void Broadcast(string message, ushort duration = 10, Broadcast.BroadcastFlags type = global::Broadcast.BroadcastFlags.Normal, bool clearPrevious = false)
+        {
+            Broadcast(new PlayerBroadcast(message, duration, true, type), clearPrevious);
+        }
+        
+        public void ShowHint(string message, float duration = 3f)
+        {
+            ShowHint(message,
+                new HintParameter[] { new StringHintParameter(message) },
+                null,
+                duration);
+        }
+        
+        public void ShowHint(string message, HintEffect[] hintEffects, float duration = 3f)
+        {
+            ShowHint(message,
+                new HintParameter[] { new StringHintParameter(message) },
+                hintEffects,
+                duration);
+        }
+        
+        public void ShowHint(string message, HintParameter[] hintParameters, HintEffect[] hintEffects, float duration = 3f)
+        {
+            if (ReferenceHub == null || ReferenceHub.hints == null)
+                return;
+
+            message ??= string.Empty;
+
+            ReferenceHub.hints.Show(new TextHint(
+                message,
+                (hintParameters != null && hintParameters.Length > 0)
+                    ? hintParameters
+                    : new HintParameter[] { new StringHintParameter(message) },
+                hintEffects,
+                duration));
+        }
+        
+        public void ShowHint(PlayerHint hint)
+        {
+            if (hint == null)
+                return;
+
+            ShowHint(hint.Message, hint.Duration);
+        }
 
         public void SendMessage(string message)
             => ReferenceHub.gameConsoleTransmission.SendMessage(message);
@@ -189,6 +243,19 @@ namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibAPI.Features
 
             return null;
         }
+        public static Player Get(GameObject gameObject)
+        {
+            if (gameObject == null)
+                return null;
+
+            ReferenceHub hub = gameObject.GetComponent<ReferenceHub>();
+
+            if (hub == null)
+                return null;
+
+            return Get(hub);
+        }
+        
         public static bool TryGet(string userId, out Player player)
         {
             player = Get(userId); 
@@ -197,5 +264,6 @@ namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibAPI.Features
 
         internal static void Remove(ReferenceHub hub)
             => Cache.Remove(hub);
+        
     }
 }
