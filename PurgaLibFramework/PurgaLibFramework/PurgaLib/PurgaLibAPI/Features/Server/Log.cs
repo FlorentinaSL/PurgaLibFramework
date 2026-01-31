@@ -33,6 +33,18 @@ namespace PurgaLibFramework.PurgaLibFramework.PurgaLib.PurgaLibAPI.Features.Serv
         public static void Error(string message) => Send($"[{Assembly.GetCallingAssembly().GetName().Name}] {message}",
             LogLevel.Error, ConsoleColor.DarkRed);
 
+        public static void Debug(object message, bool debugEnabled = true)
+        {
+            if (!debugEnabled) return;
+            Send($"[{Assembly.GetCallingAssembly().GetName().Name}] {message}", LogLevel.Debug, ConsoleColor.Magenta);
+        }
+
+        public static void Debug(string message, bool debugEnabled = true)
+        {
+            if (!debugEnabled) return;
+            Send($"[{Assembly.GetCallingAssembly().GetName().Name}] {message}", LogLevel.Debug, ConsoleColor.Magenta);
+        }
+        
         public static void Success(object message) =>
             Send($"[{Assembly.GetCallingAssembly().GetName().Name}] {message}", LogLevel.Info, ConsoleColor.Green);
         public static void Success(string message) =>
